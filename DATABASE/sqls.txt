@@ -1,0 +1,2679 @@
+mysql> CREATE TABLE IF NOT EXISTS `districts` (
+    ->   `id` int(8) NOT NULL DEFAULT '0',
+    ->   `state_id` int(8) DEFAULT NULL,
+    ->   `name` varchar(100) DEFAULT NULL,
+    ->   PRIMARY KEY (`id`)
+    -> ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+Query OK, 0 rows affected (0.28 sec)
+
+mysql> INSERT INTO `districts` (`id`, `state_id`, `name`) VALUES
+    -> (1, 1, 'North Andaman'),
+    -> (2, 1, 'South Andaman'),
+    -> (3, 1, 'Nicobar'),
+    -> (4, 2, 'Adilabad'),
+    -> (5, 2, 'Anantapur'),
+    -> (6, 2, 'Chittoor'),
+    -> (7, 2, 'East Godavari'),
+    -> (8, 2, 'Guntur'),
+    -> (9, 2, 'Hyderabad'),
+    -> (10, 2, 'Karimnagar'),
+    -> (11, 2, 'Khammam'),
+    -> (12, 2, 'Krishna'),
+    -> (13, 2, 'Kurnool'),
+    -> (14, 2, 'Mahbubnagar'),
+    -> (15, 2, 'Medak'),
+    -> (16, 2, 'Nalgonda'),
+    -> (17, 2, 'Nizamabad'),
+    -> (18, 2, 'Prakasam'),
+    -> (19, 2, 'Ranga Reddy'),
+    -> (20, 2, 'Srikakulam'),
+    -> (21, 2, 'Sri Potti Sri Ramulu Nellore'),
+    -> (22, 2, 'Vishakhapatnam'),
+    -> (23, 2, 'Vizianagaram'),
+    -> (24, 2, 'Warangal'),
+    -> (25, 2, 'West Godavari'),
+    -> (26, 2, 'Cudappah'),
+    -> (27, 3, 'Anjaw'),
+    -> (28, 3, 'Changlang'),
+    -> (29, 3, 'East Siang'),
+    -> (30, 3, 'East Kameng'),
+    -> (31, 3, 'Kurung Kumey'),
+    -> (32, 3, 'Lohit'),
+    -> (33, 3, 'Lower Dibang Valley'),
+    -> (34, 3, 'Lower Subansiri'),
+    -> (35, 3, 'Papum Pare'),
+    -> (36, 3, 'Tawang'),
+    -> (37, 3, 'Tirap'),
+    -> (38, 3, 'Dibang Valley'),
+    -> (39, 3, 'Upper Siang'),
+    -> (40, 3, 'Upper Subansiri'),
+    -> (41, 3, 'West Kameng'),
+    -> (42, 3, 'West Siang'),
+    -> (43, 4, 'Baksa'),
+    -> (44, 4, 'Barpeta'),
+    -> (45, 4, 'Bongaigaon'),
+    -> (46, 4, 'Cachar'),
+    -> (47, 4, 'Chirang'),
+    -> (48, 4, 'Darrang'),
+    -> (49, 4, 'Dhemaji'),
+    -> (50, 4, 'Dima Hasao'),
+    -> (51, 4, 'Dhubri'),
+    -> (52, 4, 'Dibrugarh'),
+    -> (53, 4, 'Goalpara'),
+    -> (54, 4, 'Golaghat'),
+    -> (55, 4, 'Hailakandi'),
+    -> (56, 4, 'Jorhat'),
+    -> (57, 4, 'Kamrup'),
+    -> (58, 4, 'Kamrup Metropolitan'),
+    -> (59, 4, 'Karbi Anglong'),
+    -> (60, 4, 'Karimganj'),
+    -> (61, 4, 'Kokrajhar'),
+    -> (62, 4, 'Lakhimpur'),
+    -> (63, 4, 'Morigaon'),
+    -> (64, 4, 'Nagaon'),
+    -> (65, 4, 'Nalbari'),
+    -> (66, 4, 'Sivasagar'),
+    -> (67, 4, 'Sonitpur'),
+    -> (68, 4, 'Tinsukia'),
+    -> (69, 4, 'Udalguri'),
+    -> (70, 5, 'Araria'),
+    -> (71, 5, 'Arwal'),
+    -> (72, 5, 'Aurangabad'),
+    -> (73, 5, 'Banka'),
+    -> (74, 5, 'Begusarai'),
+    -> (75, 5, 'Bhagalpur'),
+    -> (76, 5, 'Bhojpur'),
+    -> (77, 5, 'Buxar'),
+    -> (78, 5, 'Darbhanga'),
+    -> (79, 5, 'East Champaran'),
+    -> (80, 5, 'Gaya'),
+    -> (81, 5, 'Gopalganj'),
+    -> (82, 5, 'Jamui'),
+    -> (83, 5, 'Jehanabad'),
+    -> (84, 5, 'Kaimur'),
+    -> (85, 5, 'Katihar'),
+    -> (86, 5, 'Khagaria'),
+    -> (87, 5, 'Kishanganj'),
+    -> (88, 5, 'Lakhisarai'),
+    -> (89, 5, 'Madhepura'),
+    -> (90, 5, 'Madhubani'),
+    -> (91, 5, 'Munger'),
+    -> (92, 5, 'Muzaffarpur'),
+    -> (93, 5, 'Nalanda'),
+    -> (94, 5, 'Nawada'),
+agara'),
+(273, 17, 'Yadgir'),
+(27    -> (95, 5, 'Patna'),
+    -> (96, 5, 'Purnia'),
+    -> (97, 5, 'Rohtas'),
+    -> (98, 5, 'Saharsa'),
+    -> (99, 5, 'Samastipur'),
+    -> (100, 5, 'Saran'),
+    -> (101, 5, 'Sheikhpura'),
+    -> (102, 5, 'Sheohar'),
+    -> (103, 5, 'Sitamarhi'),
+    -> (104, 5, 'Siwan'),
+    -> (105, 5, 'Supaul'),
+    -> (106, 6, 'Chandigarh'),
+    -> (107, 7, 'Bastar'),
+    -> (108, 7, 'Bijapur'),
+    -> (109, 7, 'Bilaspur'),
+    -> (110, 7, 'Dantewada'),
+    -> (111, 7, 'Dhamtari'),
+    -> (112, 7, 'Durg'),
+    -> (113, 7, 'Jashpur'),
+    -> (114, 7, 'Janjgir-Champa'),
+    -> (115, 7, 'Korba'),
+    -> (116, 7, 'Koriya'),
+    -> (117, 7, 'Kanker'),
+    -> (118, 7, 'Kabirdham (formerly Kawardha)'),
+    -> (119, 7, 'Mahasamund'),
+    -> (120, 7, 'Narayanpur'),
+    -> (121, 7, 'Raigarh'),
+    -> (122, 7, 'Rajnandgaon'),
+    -> (123, 7, 'Raipur'),
+    -> (124, 7, 'Surguja'),
+    -> (125, 8, 'Dadra and Nagar Haveli'),
+    -> (126, 9, 'Daman'),
+    -> (127, 9, 'Diu'),
+    -> (128, 10, 'Central Delhi'),
+    -> (129, 10, 'East Delhi'),
+    -> (130, 10, 'New Delhi'),
+    -> (131, 10, 'North Delhi'),
+    -> (132, 10, 'North East Delhi'),
+    -> (133, 10, 'North West Delhi'),
+    -> (134, 10, 'South Delhi'),
+    -> (135, 10, 'South West Delhi'),
+    -> (136, 10, 'West Delhi'),
+    -> (137, 11, 'North Goa'),
+    -> (138, 11, 'South Goa'),
+    -> (139, 12, 'Ahmedabad'),
+    -> (140, 12, 'Amreli district'),
+    -> (141, 12, 'Anand'),
+    -> (142, 12, 'Banaskantha'),
+    -> (143, 12, 'Bharuch'),
+    -> (144, 12, 'Bhavnagar'),
+    -> (145, 12, 'Dahod'),
+    -> (146, 12, 'The Dangs'),
+    -> (147, 12, 'Gandhinagar'),
+    -> (148, 12, 'Jamnagar'),
+    -> (149, 12, 'Junagadh'),
+    -> (150, 12, 'Kutch'),
+    -> (151, 12, 'Kheda'),
+    -> (152, 12, 'Mehsana'),
+    -> (153, 12, 'Narmada'),
+    -> (154, 12, 'Navsari'),
+    -> (155, 12, 'Patan'),
+    -> (156, 12, 'Panchmahal'),
+    -> (157, 12, 'Porbandar'),
+    -> (158, 12, 'Rajkot'),
+    -> (159, 12, 'Sabarkantha'),
+    -> (160, 12, 'Surendranagar'),
+    -> (161, 12, 'Surat'),
+    -> (162, 12, 'Tapi'),
+    -> (163, 12, 'Vadodara'),
+    -> (164, 12, 'Valsad'),
+    -> (165, 13, 'Ambala'),
+    -> (166, 13, 'Bhiwani'),
+    -> (167, 13, 'Faridabad'),
+    -> (168, 13, 'Fatehabad'),
+    -> (169, 13, 'Gurgaon'),
+    -> (170, 13, 'Hissar'),
+50, 21, 'Gondia'),
+(351, 21, 'Hin    -> (171, 13, 'Jhajjar'),
+    -> (172, 13, 'Jind'),
+    -> (173, 13, 'Karnal'),
+    -> (174, 13, 'Kaithal'),
+    -> (175, 13, 'Kurukshetra'),
+    -> (176, 13, 'Mahendragarh'),
+    -> (177, 13, 'Mewat'),
+    -> (178, 13, 'Palwal'),
+    -> (179, 13, 'Panchkula'),
+    -> (180, 13, 'Panipat'),
+    -> (181, 13, 'Rewari'),
+    -> (182, 13, 'Rohtak'),
+    -> (183, 13, 'Sirsa'),
+    -> (184, 13, 'Sonipat'),
+    -> (185, 13, 'Yamuna Nagar'),
+    -> (186, 14, 'Bilaspur'),
+    -> (187, 14, 'Chamba'),
+    -> (188, 14, 'Hamirpur'),
+    -> (189, 14, 'Kangra'),
+    -> (190, 14, 'Kinnaur'),
+    -> (191, 14, 'Kullu'),
+    -> (192, 14, 'Lahaul and Spiti'),
+    -> (193, 14, 'Mandi'),
+    -> (194, 14, 'Shimla'),
+    -> (195, 14, 'Sirmaur'),
+    -> (196, 14, 'Solan'),
+    -> (197, 14, 'Una'),
+3    -> (198, 15, 'Anantnag'),
+    -> (199, 15, 'Badgam'),
+    -> (200, 15, 'Bandipora'),
+    -> (201, 15, 'Baramulla'),
+    -> (202, 15, 'Doda'),
+    -> (203, 15, 'Ganderbal'),
+    -> (204, 15, 'Jammu'),
+    -> (205, 15, 'Kargil'),
+    -> (206, 15, 'Kathua'),
+    -> (207, 15, 'Kishtwar'),
+    -> (208, 15, 'Kupwara'),
+    -> (209, 15, 'Kulgam'),
+    -> (210, 15, 'Leh'),
+    -> (211, 15, 'Poonch'),
+    -> (212, 15, 'Pulwama'),
+    -> (213, 15, 'Rajouri'),
+    -> (214, 15, 'Ramban'),
+    -> (215, 15, 'Reasi'),
+    -> (216, 15, 'Samba'),
+    -> (217, 15, 'Shopian'),
+    -> (218, 15, 'Srinagar'),
+    -> (219, 15, 'Udhampur'),
+    -> (220, 16, 'Bokaro'),
+    -> (221, 16, 'Chatra'),
+    -> (222, 16, 'Deoghar'),
+    -> (223, 16, 'Dhanbad'),
+    -> (224, 16, 'Dumka'),
+    -> (225, 16, 'East Singhbhum'),
+    -> (226, 16, 'Garhwa'),
+    -> (227, 16, 'Giridih'),
+    -> (228, 16, 'Godda'),
+    -> (229, 16, 'Gumla'),
+    -> (230, 16, 'Hazaribag'),
+    -> (231, 16, 'Jamtara'),
+    -> (232, 16, 'Khunti'),
+    -> (233, 16, 'Koderma'),
+    -> (234, 16, 'Latehar'),
+    -> (235, 16, 'Lohardaga'),
+    -> (236, 16, 'Pakur'),
+    -> (237, 16, 'Palamu'),
+    -> (238, 16, 'Ramgarh'),
+    -> (239, 16, 'Ranchi'),
+    -> (240, 16, 'Sahibganj'),
+    -> (241, 16, 'Seraikela Kharsawan'),
+    -> (242, 16, 'Simdega'),
+    -> (243, 16, 'West Singhbhum'),
+    -> (244, 17, 'Bagalkot'),
+    -> (245, 17, 'Bangalore Rural'),
+    -> (246, 17, 'Bangalore Urban'),
+    -> (247, 17, 'Belgaum'),
+    -> (248, 17, 'Bellary'),
+    -> (249, 17, 'Bidar'),
+    -> (250, 17, 'Bijapur'),
+    -> (251, 17, 'Chamarajnagar'),
+    -> (252, 17, 'Chikkamagaluru'),
+    -> (253, 17, 'Chikkaballapur'),
+    -> (254, 17, 'Chitradurga'),
+    -> (255, 17, 'Davanagere'),
+    -> (256, 17, 'Dharwad'),
+    -> (257, 17, 'Dakshina Kannada'),
+    -> (258, 17, 'Gadag'),
+    -> (259, 17, 'Gulbarga'),
+    -> (260, 17, 'Hassan'),
+    -> (261, 17, 'Haveri district'),
+    -> (262, 17, 'Kodagu'),
+    -> (263, 17, 'Kolar'),
+    -> (264, 17, 'Koppal'),
+    -> (265, 17, 'Mandya'),
+    -> (266, 17, 'Mysore'),
+    -> (267, 17, 'Raichur'),
+    -> (268, 17, 'Shimoga'),
+    -> (269, 17, 'Tumkur'),
+    -> (270, 17, 'Udupi'),
+    -> (271, 17, 'Uttara Kannada'),
+    -> (272, 17, 'Ramanagara'),
+    -> (273, 17, 'Yadgir'),
+    -> (274, 18, 'Alappuzha'),
+    -> (275, 18, 'Ernakulam'),
+    -> (276, 18, 'Idukki'),
+    -> (277, 18, 'Kannur'),
+    -> (278, 18, 'Kasaragod'),
+    -> (279, 18, 'Kollam'),
+    -> (280, 18, 'Kottayam'),
+    -> (281, 18, 'Kozhikode'),
+    -> (282, 18, 'Malappuram'),
+    -> (283, 18, 'Palakkad'),
+    -> (284, 18, 'Pathanamthitta'),
+    -> (285, 18, 'Thrissur'),
+    -> (286, 18, 'Thiruvananthapuram'),
+    -> (287, 18, 'Wayanad'),
+    -> (288, 19, 'Lakshadweep'),
+n    -> (289, 20, 'Agar'),
+    -> (290, 20, 'Alirajpur'),
+    -> (291, 20, 'Anuppur'),
+    -> (292, 20, 'Ashok Nagar'),
+    -> (293, 20, 'Balaghat'),
+    -> (294, 20, 'Barwani'),
+    -> (295, 20, 'Betul'),
+    -> (296, 20, 'Bhind'),
+    -> (297, 20, 'Bhopal'),
+    -> (298, 20, 'Burhanpur'),
+    -> (299, 20, 'Chhatarpur'),
+    -> (300, 20, 'Chhindwara'),
+    -> (301, 20, 'Damoh'),
+    -> (302, 20, 'Datia'),
+    -> (303, 20, 'Dewas'),
+    -> (304, 20, 'Dhar'),
+    -> (305, 20, 'Dindori'),
+    -> (306, 20, 'Guna'),
+    -> (307, 20, 'Gwalior'),
+    -> (308, 20, 'Harda'),
+    -> (309, 20, 'Hoshangabad'),
+    -> (310, 20, 'Indore'),
+    -> (311, 20, 'Jabalpur'),
+    -> (312, 20, 'Jhabua'),
+    -> (313, 20, 'Katni'),
+    -> (314, 20, 'Khandwa (East Nimar)'),
+    -> (315, 20, 'Khargone (West Nimar)'),
+    -> (316, 20, 'Mandla'),
+    -> (317, 20, 'Mandsaur'),
+    -> (318, 20, 'Morena'),
+    -> (319, 20, 'Narsinghpur'),
+    -> (320, 20, 'Neemuch'),
+    -> (321, 20, 'Panna'),
+    -> (322, 20, 'Raisen'),
+    -> (323, 20, 'Rajgarh'),
+    -> (324, 20, 'Ratlam'),
+    -> (325, 20, 'Rewa'),
+    -> (326, 20, 'Sagar'),
+'South Sikkim'),
+(50    -> (327, 20, 'Satna'),
+    -> (328, 20, 'Sehore'),
+    -> (329, 20, 'Seoni'),
+    -> (330, 20, 'Shahdol'),
+    -> (331, 20, 'Shajapur'),
+    -> (332, 20, 'Sheopur'),
+    -> (333, 20, 'Shivpuri'),
+    -> (334, 20, 'Sidhi'),
+    -> (335, 20, 'Singrauli'),
+    -> (336, 20, 'Tikamgarh'),
+    -> (337, 20, 'Ujjain'),
+    -> (338, 20, 'Umaria'),
+    -> (339, 20, 'Vidisha'),
+    -> (340, 21, 'Ahmednagar'),
+    -> (341, 21, 'Akola'),
+    -> (342, 21, 'Amravati'),
+    -> (343, 21, 'Aurangabad'),
+    -> (344, 21, 'Beed'),
+    -> (345, 21, 'Bhandara'),
+    -> (346, 21, 'Buldhana'),
+    -> (347, 21, 'Chandrapur'),
+    -> (348, 21, 'Dhule'),
+    -> (349, 21, 'Gadchiroli'),
+    -> (350, 21, 'Gondia'),
+    -> (351, 21, 'Hingoli'),
+    -> (352, 21, 'Jalgaon'),
+    -> (353, 21, 'Jalna'),
+    -> (354, 21, 'Kolhapur'),
+    -> (355, 21, 'Latur'),
+    -> (356, 21, 'Mumbai City'),
+    -> (357, 21, 'Mumbai suburban'),
+    -> (358, 21, 'Nanded'),
+    -> (359, 21, 'Nandurbar'),
+    -> (360, 21, 'Nagpur'),
+    -> (361, 21, 'Nashik'),
+    -> (362, 21, 'Osmanabad'),
+    -> (363, 21, 'Parbhani'),
+    -> (364, 21, 'Pune'),
+    -> (365, 21, 'Raigad'),
+    -> (366, 21, 'Ratnagiri'),
+    -> (367, 21, 'Sangli'),
+    -> (368, 21, 'Satara'),
+    -> (369, 21, 'Sindhudurg'),
+    -> (370, 21, 'Solapur'),
+    -> (371, 21, 'Thane'),
+    -> (372, 21, 'Wardha'),
+    -> (373, 21, 'Washim'),
+    -> (374, 21, 'Yavatmal'),
+    -> (375, 22, 'Bishnupur'),
+    -> (376, 22, 'Churachandpur'),
+    -> (377, 22, 'Chandel'),
+    -> (378, 22, 'Imphal East'),
+    -> (379, 22, 'Senapati'),
+    -> (380, 22, 'Tamenglong'),
+    -> (381, 22, 'Thoubal'),
+    -> (382, 22, 'Ukhrul'),
+    -> (383, 22, 'Imphal West'),
+    -> (384, 23, 'East Garo Hills'),
+    -> (385, 23, 'East Khasi Hills'),
+    -> (386, 23, 'Jaintia Hills'),
+    -> (387, 23, 'Ri Bhoi'),
+    -> (388, 23, 'South Garo Hills'),
+    -> (389, 23, 'West Garo Hills'),
+    -> (390, 23, 'West Khasi Hills'),
+    -> (391, 24, 'Aizawl'),
+    -> (392, 24, 'Champhai'),
+    -> (393, 24, 'Kolasib'),
+    -> (394, 24, 'Lawngtlai'),
+    -> (395, 24, 'Lunglei'),
+    -> (396, 24, 'Mamit'),
+    -> (397, 24, 'Saiha'),
+    -> (398, 24, 'Serchhip'),
+    -> (399, 25, 'Dimapur'),
+    -> (400, 25, 'Kiphire'),
+    -> (401, 25, 'Kohima'),
+    -> (402, 25, 'Longleng'),
+    -> (403, 25, 'Mokokchung'),
+    -> (404, 25, 'Mon'),
+    -> (405, 25, 'Peren'),
+    -> (406, 25, 'Phek'),
+    -> (407, 25, 'Tuensang'),
+    -> (408, 25, 'Wokha'),
+    -> (409, 25, 'Zunheboto'),
+    -> (410, 26, 'Angul'),
+    -> (411, 26, 'Boudh (Bauda)'),
+    -> (412, 26, 'Bhadrak'),
+    -> (413, 26, 'Balangir'),
+5    -> (414, 26, 'Bargarh (Baragarh)'),
+    -> (415, 26, 'Balasore'),
+    -> (416, 26, 'Cuttack'),
+    -> (417, 26, 'Debagarh (Deogarh)'),
+    -> (418, 26, 'Dhenkanal'),
+    -> (419, 26, 'Ganjam'),
+    -> (420, 26, 'Gajapati'),
+    -> (421, 26, 'Jharsuguda'),
+    -> (422, 26, 'Jajpur'),
+    -> (423, 26, 'Jagatsinghpur'),
+    -> (424, 26, 'Khordha'),
+    -> (425, 26, 'Kendujhar (Keonjhar)'),
+    -> (426, 26, 'Kalahandi'),
+    -> (427, 26, 'Kandhamal'),
+    -> (428, 26, 'Koraput'),
+    -> (429, 26, 'Kendrapara'),
+    -> (430, 26, 'Malkangiri'),
+    -> (431, 26, 'Mayurbhanj'),
+    -> (432, 26, 'Nabarangpur'),
+    -> (433, 26, 'Nuapada'),
+    -> (434, 26, 'Nayagarh'),
+    -> (435, 26, 'Puri'),
+    -> (436, 26, 'Rayagada'),
+    -> (437, 26, 'Sambalpur'),
+    -> (438, 26, 'Subarnapur (Sonepur)'),
+    -> (439, 26, 'Sundergarh'),
+    -> (440, 27, 'Karaikal'),
+    -> (441, 27, 'Mahe'),
+    -> (442, 27, 'Pondicherry'),
+    -> (443, 27, 'Yanam'),
+    -> (444, 28, 'Amritsar'),
+    -> (445, 28, 'Barnala'),
+    -> (446, 28, 'Bathinda'),
+    -> (447, 28, 'Firozpur'),
+    -> (448, 28, 'Faridkot'),
+    -> (449, 28, 'Fatehgarh Sahib'),
+    -> (450, 28, 'Fazilka[6]'),
+    -> (451, 28, 'Gurdaspur'),
+    -> (452, 28, 'Hoshiarpur'),
+    -> (453, 28, 'Jalandhar'),
+    -> (454, 28, 'Kapurthala'),
+    -> (455, 28, 'Ludhiana'),
+    -> (456, 28, 'Mansa'),
+    -> (457, 28, 'Moga'),
+    -> (458, 28, 'Sri Muktsar Sahib'),
+    -> (459, 28, 'Pathankot'),
+    -> (460, 28, 'Patiala'),
+    -> (461, 28, 'Rupnagar'),
+    -> (462, 28, 'Ajitgarh (Mohali)'),
+    -> (463, 28, 'Sangrur'),
+    -> (464, 28, 'Shahid Bhagat Singh Nagar'),
+    -> (465, 28, 'Tarn Taran'),
+    -> (466, 29, 'Ajmer'),
+    -> (467, 29, 'Alwar'),
+    -> (468, 29, 'Bikaner'),
+    -> (469, 29, 'Barmer'),
+    -> (470, 29, 'Banswara'),
+    -> (471, 29, 'Bharatpur'),
+    -> (472, 29, 'Baran'),
+    -> (473, 29, 'Bundi'),
+    -> (474, 29, 'Bhilwara'),
+    -> (475, 29, 'Churu'),
+    -> (476, 29, 'Chittorgarh'),
+    -> (477, 29, 'Dausa'),
+    -> (478, 29, 'Dholpur'),
+    -> (479, 29, 'Dungapur'),
+    -> (480, 29, 'Ganganagar'),
+    -> (481, 29, 'Hanumangarh'),
+    -> (482, 29, 'Jhunjhunu'),
+    -> (483, 29, 'Jalore'),
+    -> (484, 29, 'Jodhpur'),
+    -> (485, 29, 'Jaipur'),
+    -> (486, 29, 'Jaisalmer'),
+    -> (487, 29, 'Jhalawar'),
+    -> (488, 29, 'Karauli'),
+    -> (489, 29, 'Kota'),
+    -> (490, 29, 'Nagaur'),
+    -> (491, 29, 'Pali'),
+    -> (492, 29, 'Pratapgarh'),
+    -> (493, 29, 'Rajsamand'),
+    -> (494, 29, 'Sikar'),
+    -> (495, 29, 'Sawai Madhopur'),
+    -> (496, 29, 'Sirohi'),
+    -> (497, 29, 'Tonk'),
+    -> (498, 29, 'Udaipur'),
+    -> (499, 30, 'East Sikkim'),
+    -> (500, 30, 'North Sikkim'),
+    -> (501, 30, 'South Sikkim'),
+    -> (502, 30, 'West Sikkim'),
+    -> (503, 31, 'Ariyalur'),
+    -> (504, 31, 'Chennai'),
+    -> (505, 31, 'Coimbatore'),
+    -> (506, 31, 'Cuddalore'),
+    -> (507, 31, 'Dharmapuri'),
+    -> (508, 31, 'Dindigul'),
+    -> (509, 31, 'Erode'),
+    -> (510, 31, 'Kanchipuram'),
+    -> (511, 31, 'Kanyakumari'),
+    -> (512, 31, 'Karur'),
+    -> (513, 31, 'Krishnagiri'),
+    -> (514, 31, 'Madurai'),
+    -> (515, 31, 'Nagapattinam'),
+    -> (516, 31, 'Nilgiris'),
+    -> (517, 31, 'Namakkal'),
+    -> (518, 31, 'Perambalur'),
+    -> (519, 31, 'Pudukkottai'),
+    -> (520, 31, 'Ramanathapuram'),
+    -> (521, 31, 'Salem'),
+    -> (522, 31, 'Sivaganga'),
+    -> (523, 31, 'Tirupur'),
+    -> (524, 31, 'Tiruchirappalli'),
+    -> (525, 31, 'Theni'),
+    -> (526, 31, 'Tirunelveli'),
+    -> (527, 31, 'Thanjavur'),
+    -> (528, 31, 'Thoothukudi'),
+    -> (529, 31, 'Tiruvallur'),
+    -> (530, 31, 'Tiruvarur'),
+    -> (531, 31, 'Tiruvannamalai'),
+    -> (532, 31, 'Vellore'),
+    -> (533, 31, 'Viluppuram'),
+    -> (534, 31, 'Virudhunagar'),
+    -> (535, 32, 'Dhalai'),
+    -> (536, 32, 'North Tripura'),
+    -> (537, 32, 'South Tripura'),
+    -> (538, 32, 'Khowai[7]'),
+    -> (539, 32, 'West Tripura'),
+    -> (540, 33, 'Agra'),
+    -> (541, 33, 'Aligarh'),
+    -> (542, 33, 'Allahabad'),
+    -> (543, 33, 'Ambedkar Nagar'),
+    -> (544, 33, 'Auraiya'),
+    -> (545, 33, 'Azamgarh'),
+    -> (546, 33, 'Bagpat'),
+    -> (547, 33, 'Bahraich'),
+    -> (548, 33, 'Ballia'),
+    -> (549, 33, 'Balrampur'),
+    -> (550, 33, 'Banda'),
+    -> (551, 33, 'Barabanki'),
+    -> (552, 33, 'Bareilly'),
+    -> (553, 33, 'Basti'),
+    -> (554, 33, 'Bijnor'),
+    -> (555, 33, 'Budaun'),
+    -> (556, 33, 'Bulandshahr'),
+    -> (557, 33, 'Chandauli'),
+    -> (558, 33, 'Chhatrapati Shahuji Maharaj Nagar[8]'),
+    -> (559, 33, 'Chitrakoot'),
+    -> (560, 33, 'Deoria'),
+    -> (561, 33, 'Etah'),
+    -> (562, 33, 'Etawah'),
+    -> (563, 33, 'Faizabad'),
+    -> (564, 33, 'Farrukhabad'),
+    -> (565, 33, 'Fatehpur'),
+    -> (566, 33, 'Firozabad'),
+    -> (567, 33, 'Gautam Buddh Nagar'),
+    -> (568, 33, 'Ghaziabad'),
+    -> (569, 33, 'Ghazipur'),
+    -> (570, 33, 'Gonda'),
+    -> (571, 33, 'Gorakhpur'),
+    -> (572, 33, 'Hamirpur'),
+    -> (573, 33, 'Hardoi'),
+    -> (574, 33, 'Hathras'),
+    -> (575, 33, 'Jalaun'),
+    -> (576, 33, 'Jaunpur district'),
+    -> (577, 33, 'Jhansi'),
+    -> (578, 33, 'Jyotiba Phule Nagar'),
+    -> (579, 33, 'Kannauj'),
+    -> (580, 33, 'Kanpur'),
+    -> (581, 33, 'Kanshi Ram Nagar'),
+    -> (582, 33, 'Kaushambi'),
+    -> (583, 33, 'Kushinagar'),
+    -> (584, 33, 'Lakhimpur Kheri'),
+    -> (585, 33, 'Lalitpur'),
+    -> (586, 33, 'Lucknow'),
+    -> (587, 33, 'Maharajganj'),
+    -> (588, 33, 'Mahoba'),
+    -> (589, 33, 'Mainpuri'),
+    -> (590, 33, 'Mathura'),
+    -> (591, 33, 'Mau'),
+    -> (592, 33, 'Meerut'),
+    -> (593, 33, 'Mirzapur'),
+    -> (594, 33, 'Moradabad'),
+    -> (595, 33, 'Muzaffarnagar'),
+    -> (596, 33, 'Panchsheel Nagar district (Hapur)'),
+    -> (597, 33, 'Pilibhit'),
+    -> (598, 33, 'Pratapgarh'),
+    -> (599, 33, 'Raebareli'),
+    -> (600, 33, 'Ramabai Nagar (Kanpur Dehat)'),
+    -> (601, 33, 'Rampur'),
+    -> (602, 33, 'Saharanpur'),
+    -> (603, 33, 'Sant Kabir Nagar'),
+    -> (604, 33, 'Sant Ravidas Nagar'),
+    -> (605, 33, 'Shahjahanpur'),
+    -> (606, 33, 'Shamli[9]'),
+    -> (607, 33, 'Shravasti'),
+    -> (608, 33, 'Siddharthnagar'),
+    -> (609, 33, 'Sitapur'),
+    -> (610, 33, 'Sonbhadra'),
+    -> (611, 33, 'Sultanpur'),
+    -> (612, 33, 'Unnao'),
+    -> (613, 33, 'Varanasi'),
+    -> (614, 34, 'Almora'),
+    -> (615, 34, 'Bageshwar'),
+    -> (616, 34, 'Chamoli'),
+    -> (617, 34, 'Champawat'),
+    -> (618, 34, 'Dehradun'),
+    -> (619, 34, 'Haridwar'),
+    -> (620, 34, 'Nainital'),
+    -> (621, 34, 'Pauri Garhwal'),
+    -> (622, 34, 'Pithoragarh'),
+    -> (623, 34, 'Rudraprayag'),
+    -> (624, 34, 'Tehri Garhwal'),
+    -> (625, 34, 'Udham Singh Nagar'),
+    -> (626, 34, 'Uttarkashi'),
+    -> (627, 35, 'Bankura'),
+    -> (628, 35, 'Bardhaman'),
+    -> (629, 35, 'Birbhum'),
+    -> (630, 35, 'Cooch Behar'),
+    -> (631, 35, 'Dakshin Dinajpur'),
+    -> (632, 35, 'Darjeeling'),
+    -> (633, 35, 'Hooghly'),
+    -> (634, 35, 'Howrah'),
+    -> (635, 35, 'Jalpaiguri'),
+    -> (636, 35, 'Kolkata'),
+    -> (637, 35, 'Maldah'),
+    -> (638, 35, 'Murshidabad'),
+    -> (639, 35, 'Nadia'),
+    -> (640, 35, 'North 24 Parganas'),
+    -> (641, 35, 'Paschim Medinipur'),
+    -> (642, 35, 'Purba Medinipur'),
+    -> (643, 35, 'Purulia'),
+    -> (644, 35, 'South 24 Parganas'),
+    -> (645, 35, 'Uttar Dinajpur');
+Query OK, 645 rows affected (0.16 sec)
+Records: 645  Duplicates: 0  Warnings: 0
+
+mysql> CREATE TABLE IF NOT EXISTS `states` (
+    ->   `id` int(8) NOT NULL AUTO_INCREMENT,
+    ->   `name` varchar(100) NOT NULL,
+    ->   PRIMARY KEY (`id`)
+    -> ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=36 ;
+Query OK, 0 rows affected (0.27 sec)
+
+mysql> INSERT INTO `states` (`id`, `name`) VALUES
+    -> (1, 'Andaman and Nicobar (AN)'),
+    -> (2, 'Andhra Pradesh (AP)'),
+    -> (3, 'Arunachal Pradesh (AR)'),
+    -> (4, 'Assam (AS)'),
+    -> (5, 'Bihar (BR)'),
+    -> (6, 'Chandigarh (CH)'),
+    -> (7, 'Chhattisgarh (CG)'),
+    -> (8, 'Dadra and Nagar Haveli (DN)'),
+    -> (9, 'Daman and Diu (DD)'),
+    -> (10, 'Delhi (DL)'),
+    -> (11, 'Goa (GA)'),
+    -> (12, 'Gujarat (GJ)'),
+    -> (13, 'Haryana (HR)'),
+    -> (14, 'Himachal Pradesh (HP)'),
+    -> (15, 'Jammu and Kashmir (JK)'),
+    -> (16, 'Jharkhand (JH)'),
+    -> (17, 'Karnataka (KA)'),
+    -> (18, 'Kerala (KL)'),
+    -> (19, 'Lakshdweep (LD)'),
+    -> (20, 'Madhya Pradesh (MP)'),
+    -> (21, 'Maharashtra (MH)'),
+    -> (22, 'Manipur (MN)'),
+    -> (23, 'Meghalaya (ML)'),
+    -> (24, 'Mizoram (MZ)'),
+    -> (25, 'Nagaland (NL)'),
+    -> (26, 'Odisha (OD)'),
+    -> (27, 'Puducherry (PY)'),
+    -> (28, 'Punjab (PB)'),
+    -> (29, 'Rajasthan (RJ)'),
+    -> (30, 'Sikkim (SK)'),
+    -> (31, 'Tamil Nadu (TN)'),
+    -> (32, 'Tripura (TR)'),
+    -> (33, 'Uttar Pradesh (UP)'),
+    -> (34, 'Uttarakhand (UK)'),
+    -> (35, 'West Bengal (WB)');
+Query OK, 35 rows affected (0.05 sec)
+Records: 35  Duplicates: 0  Warnings: 0
+
+
+
+mysql> create view constituency as select districts.name as district,states.name as state from districts,states where districts.state_id=states.id;
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> select * from constituency;
++--------------------------------------+-----------------------------+
+| district                             | state                       |
++--------------------------------------+-----------------------------+
+| North Andaman                        | Andaman and Nicobar (AN)    |
+| South Andaman                        | Andaman and Nicobar (AN)    |
+| Nicobar                              | Andaman and Nicobar (AN)    |
+| Adilabad                             | Andhra Pradesh (AP)         |
+| Anantapur                            | Andhra Pradesh (AP)         |
+| Chittoor                             | Andhra Pradesh (AP)         |
+| East Godavari                        | Andhra Pradesh (AP)         |
+| Guntur                               | Andhra Pradesh (AP)         |
+| Hyderabad                            | Andhra Pradesh (AP)         |
+| Karimnagar                           | Andhra Pradesh (AP)         |
+| Khammam                              | Andhra Pradesh (AP)         |
+| Krishna                              | Andhra Pradesh (AP)         |
+| Kurnool                              | Andhra Pradesh (AP)         |
+| Mahbubnagar                          | Andhra Pradesh (AP)         |
+| Medak                                | Andhra Pradesh (AP)         |
+| Nalgonda                             | Andhra Pradesh (AP)         |
+| Nizamabad                            | Andhra Pradesh (AP)         |
+| Prakasam                             | Andhra Pradesh (AP)         |
+| Ranga Reddy                          | Andhra Pradesh (AP)         |
+| Srikakulam                           | Andhra Pradesh (AP)         |
+| Sri Potti Sri Ramulu Nellore         | Andhra Pradesh (AP)         |
+| Vishakhapatnam                       | Andhra Pradesh (AP)         |
+| Vizianagaram                         | Andhra Pradesh (AP)         |
+| Warangal                             | Andhra Pradesh (AP)         |
+| West Godavari                        | Andhra Pradesh (AP)         |
+| Cudappah                             | Andhra Pradesh (AP)         |
+| Anjaw                                | Arunachal Pradesh (AR)      |
+| Changlang                            | Arunachal Pradesh (AR)      |
+| East Siang                           | Arunachal Pradesh (AR)      |
+| East Kameng                          | Arunachal Pradesh (AR)      |
+| Kurung Kumey                         | Arunachal Pradesh (AR)      |
+| Lohit                                | Arunachal Pradesh (AR)      |
+| Lower Dibang Valley                  | Arunachal Pradesh (AR)      |
+| Lower Subansiri                      | Arunachal Pradesh (AR)      |
+| Papum Pare                           | Arunachal Pradesh (AR)      |
+| Tawang                               | Arunachal Pradesh (AR)      |
+| Tirap                                | Arunachal Pradesh (AR)      |
+| Dibang Valley                        | Arunachal Pradesh (AR)      |
+| Upper Siang                          | Arunachal Pradesh (AR)      |
+| Upper Subansiri                      | Arunachal Pradesh (AR)      |
+| West Kameng                          | Arunachal Pradesh (AR)      |
+| West Siang                           | Arunachal Pradesh (AR)      |
+| Baksa                                | Assam (AS)                  |
+| Barpeta                              | Assam (AS)                  |
+| Bongaigaon                           | Assam (AS)                  |
+| Cachar                               | Assam (AS)                  |
+| Chirang                              | Assam (AS)                  |
+| Darrang                              | Assam (AS)                  |
+| Dhemaji                              | Assam (AS)                  |
+| Dima Hasao                           | Assam (AS)                  |
+| Dhubri                               | Assam (AS)                  |
+| Dibrugarh                            | Assam (AS)                  |
+| Goalpara                             | Assam (AS)                  |
+| Golaghat                             | Assam (AS)                  |
+| Hailakandi                           | Assam (AS)                  |
+| Jorhat                               | Assam (AS)                  |
+| Kamrup                               | Assam (AS)                  |
+| Kamrup Metropolitan                  | Assam (AS)                  |
+| Karbi Anglong                        | Assam (AS)                  |
+| Karimganj                            | Assam (AS)                  |
+| Kokrajhar                            | Assam (AS)                  |
+| Lakhimpur                            | Assam (AS)                  |
+| Morigaon                             | Assam (AS)                  |
+| Nagaon                               | Assam (AS)                  |
+| Nalbari                              | Assam (AS)                  |
+| Sivasagar                            | Assam (AS)                  |
+| Sonitpur                             | Assam (AS)                  |
+| Tinsukia                             | Assam (AS)                  |
+| Udalguri                             | Assam (AS)                  |
+| Araria                               | Bihar (BR)                  |
+| Arwal                                | Bihar (BR)                  |
+| Aurangabad                           | Bihar (BR)                  |
+| Banka                                | Bihar (BR)                  |
+| Begusarai                            | Bihar (BR)                  |
+| Bhagalpur                            | Bihar (BR)                  |
+| Bhojpur                              | Bihar (BR)                  |
+| Buxar                                | Bihar (BR)                  |
+| Darbhanga                            | Bihar (BR)                  |
+| East Champaran                       | Bihar (BR)                  |
+| Gaya                                 | Bihar (BR)                  |
+| Gopalganj                            | Bihar (BR)                  |
+| Jamui                                | Bihar (BR)                  |
+| Jehanabad                            | Bihar (BR)                  |
+| Kaimur                               | Bihar (BR)                  |
+| Katihar                              | Bihar (BR)                  |
+| Khagaria                             | Bihar (BR)                  |
+| Kishanganj                           | Bihar (BR)                  |
+| Lakhisarai                           | Bihar (BR)                  |
+| Madhepura                            | Bihar (BR)                  |
+| Madhubani                            | Bihar (BR)                  |
+| Munger                               | Bihar (BR)                  |
+| Muzaffarpur                          | Bihar (BR)                  |
+| Nalanda                              | Bihar (BR)                  |
+| Nawada                               | Bihar (BR)                  |
+| Patna                                | Bihar (BR)                  |
+| Purnia                               | Bihar (BR)                  |
+| Rohtas                               | Bihar (BR)                  |
+| Saharsa                              | Bihar (BR)                  |
+| Samastipur                           | Bihar (BR)                  |
+| Saran                                | Bihar (BR)                  |
+| Sheikhpura                           | Bihar (BR)                  |
+| Sheohar                              | Bihar (BR)                  |
+| Sitamarhi                            | Bihar (BR)                  |
+| Siwan                                | Bihar (BR)                  |
+| Supaul                               | Bihar (BR)                  |
+| Chandigarh                           | Chandigarh (CH)             |
+| Bastar                               | Chhattisgarh (CG)           |
+| Bijapur                              | Chhattisgarh (CG)           |
+| Bilaspur                             | Chhattisgarh (CG)           |
+| Dantewada                            | Chhattisgarh (CG)           |
+| Dhamtari                             | Chhattisgarh (CG)           |
+| Durg                                 | Chhattisgarh (CG)           |
+| Jashpur                              | Chhattisgarh (CG)           |
+| Janjgir-Champa                       | Chhattisgarh (CG)           |
+| Korba                                | Chhattisgarh (CG)           |
+| Koriya                               | Chhattisgarh (CG)           |
+| Kanker                               | Chhattisgarh (CG)           |
+| Kabirdham (formerly Kawardha)        | Chhattisgarh (CG)           |
+| Mahasamund                           | Chhattisgarh (CG)           |
+| Narayanpur                           | Chhattisgarh (CG)           |
+| Raigarh                              | Chhattisgarh (CG)           |
+| Rajnandgaon                          | Chhattisgarh (CG)           |
+| Raipur                               | Chhattisgarh (CG)           |
+| Surguja                              | Chhattisgarh (CG)           |
+| Dadra and Nagar Haveli               | Dadra and Nagar Haveli (DN) |
+| Daman                                | Daman and Diu (DD)          |
+| Diu                                  | Daman and Diu (DD)          |
+| Central Delhi                        | Delhi (DL)                  |
+| East Delhi                           | Delhi (DL)                  |
+| New Delhi                            | Delhi (DL)                  |
+| North Delhi                          | Delhi (DL)                  |
+| North East Delhi                     | Delhi (DL)                  |
+| North West Delhi                     | Delhi (DL)                  |
+| South Delhi                          | Delhi (DL)                  |
+| South West Delhi                     | Delhi (DL)                  |
+| West Delhi                           | Delhi (DL)                  |
+| North Goa                            | Goa (GA)                    |
+| South Goa                            | Goa (GA)                    |
+| Ahmedabad                            | Gujarat (GJ)                |
+| Amreli district                      | Gujarat (GJ)                |
+| Anand                                | Gujarat (GJ)                |
+| Banaskantha                          | Gujarat (GJ)                |
+| Bharuch                              | Gujarat (GJ)                |
+| Bhavnagar                            | Gujarat (GJ)                |
+| Dahod                                | Gujarat (GJ)                |
+| The Dangs                            | Gujarat (GJ)                |
+| Gandhinagar                          | Gujarat (GJ)                |
+| Jamnagar                             | Gujarat (GJ)                |
+| Junagadh                             | Gujarat (GJ)                |
+| Kutch                                | Gujarat (GJ)                |
+| Kheda                                | Gujarat (GJ)                |
+| Mehsana                              | Gujarat (GJ)                |
+| Narmada                              | Gujarat (GJ)                |
+| Navsari                              | Gujarat (GJ)                |
+| Patan                                | Gujarat (GJ)                |
+| Panchmahal                           | Gujarat (GJ)                |
+| Porbandar                            | Gujarat (GJ)                |
+| Rajkot                               | Gujarat (GJ)                |
+| Sabarkantha                          | Gujarat (GJ)                |
+| Surendranagar                        | Gujarat (GJ)                |
+| Surat                                | Gujarat (GJ)                |
+| Tapi                                 | Gujarat (GJ)                |
+| Vadodara                             | Gujarat (GJ)                |
+| Valsad                               | Gujarat (GJ)                |
+| Ambala                               | Haryana (HR)                |
+| Bhiwani                              | Haryana (HR)                |
+| Faridabad                            | Haryana (HR)                |
+| Fatehabad                            | Haryana (HR)                |
+| Gurgaon                              | Haryana (HR)                |
+| Hissar                               | Haryana (HR)                |
+| Jhajjar                              | Haryana (HR)                |
+| Jind                                 | Haryana (HR)                |
+| Karnal                               | Haryana (HR)                |
+| Kaithal                              | Haryana (HR)                |
+| Kurukshetra                          | Haryana (HR)                |
+| Mahendragarh                         | Haryana (HR)                |
+| Mewat                                | Haryana (HR)                |
+| Palwal                               | Haryana (HR)                |
+| Panchkula                            | Haryana (HR)                |
+| Panipat                              | Haryana (HR)                |
+| Rewari                               | Haryana (HR)                |
+| Rohtak                               | Haryana (HR)                |
+| Sirsa                                | Haryana (HR)                |
+| Sonipat                              | Haryana (HR)                |
+| Yamuna Nagar                         | Haryana (HR)                |
+| Bilaspur                             | Himachal Pradesh (HP)       |
+| Chamba                               | Himachal Pradesh (HP)       |
+| Hamirpur                             | Himachal Pradesh (HP)       |
+| Kangra                               | Himachal Pradesh (HP)       |
+| Kinnaur                              | Himachal Pradesh (HP)       |
+| Kullu                                | Himachal Pradesh (HP)       |
+| Lahaul and Spiti                     | Himachal Pradesh (HP)       |
+| Mandi                                | Himachal Pradesh (HP)       |
+| Shimla                               | Himachal Pradesh (HP)       |
+| Sirmaur                              | Himachal Pradesh (HP)       |
+| Solan                                | Himachal Pradesh (HP)       |
+| Una                                  | Himachal Pradesh (HP)       |
+| Anantnag                             | Jammu and Kashmir (JK)      |
+| Badgam                               | Jammu and Kashmir (JK)      |
+| Bandipora                            | Jammu and Kashmir (JK)      |
+| Baramulla                            | Jammu and Kashmir (JK)      |
+| Doda                                 | Jammu and Kashmir (JK)      |
+| Ganderbal                            | Jammu and Kashmir (JK)      |
+| Jammu                                | Jammu and Kashmir (JK)      |
+| Kargil                               | Jammu and Kashmir (JK)      |
+| Kathua                               | Jammu and Kashmir (JK)      |
+| Kishtwar                             | Jammu and Kashmir (JK)      |
+| Kupwara                              | Jammu and Kashmir (JK)      |
+| Kulgam                               | Jammu and Kashmir (JK)      |
+| Leh                                  | Jammu and Kashmir (JK)      |
+| Poonch                               | Jammu and Kashmir (JK)      |
+| Pulwama                              | Jammu and Kashmir (JK)      |
+| Rajouri                              | Jammu and Kashmir (JK)      |
+| Ramban                               | Jammu and Kashmir (JK)      |
+| Reasi                                | Jammu and Kashmir (JK)      |
+| Samba                                | Jammu and Kashmir (JK)      |
+| Shopian                              | Jammu and Kashmir (JK)      |
+| Srinagar                             | Jammu and Kashmir (JK)      |
+| Udhampur                             | Jammu and Kashmir (JK)      |
+| Bokaro                               | Jharkhand (JH)              |
+| Chatra                               | Jharkhand (JH)              |
+| Deoghar                              | Jharkhand (JH)              |
+| Dhanbad                              | Jharkhand (JH)              |
+| Dumka                                | Jharkhand (JH)              |
+| East Singhbhum                       | Jharkhand (JH)              |
+| Garhwa                               | Jharkhand (JH)              |
+| Giridih                              | Jharkhand (JH)              |
+| Godda                                | Jharkhand (JH)              |
+| Gumla                                | Jharkhand (JH)              |
+| Hazaribag                            | Jharkhand (JH)              |
+| Jamtara                              | Jharkhand (JH)              |
+| Khunti                               | Jharkhand (JH)              |
+| Koderma                              | Jharkhand (JH)              |
+| Latehar                              | Jharkhand (JH)              |
+| Lohardaga                            | Jharkhand (JH)              |
+| Pakur                                | Jharkhand (JH)              |
+| Palamu                               | Jharkhand (JH)              |
+| Ramgarh                              | Jharkhand (JH)              |
+| Ranchi                               | Jharkhand (JH)              |
+| Sahibganj                            | Jharkhand (JH)              |
+| Seraikela Kharsawan                  | Jharkhand (JH)              |
+| Simdega                              | Jharkhand (JH)              |
+| West Singhbhum                       | Jharkhand (JH)              |
+| Bagalkot                             | Karnataka (KA)              |
+| Bangalore Rural                      | Karnataka (KA)              |
+| Bangalore Urban                      | Karnataka (KA)              |
+| Belgaum                              | Karnataka (KA)              |
+| Bellary                              | Karnataka (KA)              |
+| Bidar                                | Karnataka (KA)              |
+| Bijapur                              | Karnataka (KA)              |
+| Chamarajnagar                        | Karnataka (KA)              |
+| Chikkamagaluru                       | Karnataka (KA)              |
+| Chikkaballapur                       | Karnataka (KA)              |
+| Chitradurga                          | Karnataka (KA)              |
+| Davanagere                           | Karnataka (KA)              |
+| Dharwad                              | Karnataka (KA)              |
+| Dakshina Kannada                     | Karnataka (KA)              |
+| Gadag                                | Karnataka (KA)              |
+| Gulbarga                             | Karnataka (KA)              |
+| Hassan                               | Karnataka (KA)              |
+| Haveri district                      | Karnataka (KA)              |
+| Kodagu                               | Karnataka (KA)              |
+| Kolar                                | Karnataka (KA)              |
+| Koppal                               | Karnataka (KA)              |
+| Mandya                               | Karnataka (KA)              |
+| Mysore                               | Karnataka (KA)              |
+| Raichur                              | Karnataka (KA)              |
+| Shimoga                              | Karnataka (KA)              |
+| Tumkur                               | Karnataka (KA)              |
+| Udupi                                | Karnataka (KA)              |
+| Uttara Kannada                       | Karnataka (KA)              |
+| Ramanagara                           | Karnataka (KA)              |
+| Yadgir                               | Karnataka (KA)              |
+| Alappuzha                            | Kerala (KL)                 |
+| Ernakulam                            | Kerala (KL)                 |
+| Idukki                               | Kerala (KL)                 |
+| Kannur                               | Kerala (KL)                 |
+| Kasaragod                            | Kerala (KL)                 |
+| Kollam                               | Kerala (KL)                 |
+| Kottayam                             | Kerala (KL)                 |
+| Kozhikode                            | Kerala (KL)                 |
+| Malappuram                           | Kerala (KL)                 |
+| Palakkad                             | Kerala (KL)                 |
+| Pathanamthitta                       | Kerala (KL)                 |
+| Thrissur                             | Kerala (KL)                 |
+| Thiruvananthapuram                   | Kerala (KL)                 |
+| Wayanad                              | Kerala (KL)                 |
+| Lakshadweep                          | Lakshdweep (LD)             |
+| Agar                                 | Madhya Pradesh (MP)         |
+| Alirajpur                            | Madhya Pradesh (MP)         |
+| Anuppur                              | Madhya Pradesh (MP)         |
+| Ashok Nagar                          | Madhya Pradesh (MP)         |
+| Balaghat                             | Madhya Pradesh (MP)         |
+| Barwani                              | Madhya Pradesh (MP)         |
+| Betul                                | Madhya Pradesh (MP)         |
+| Bhind                                | Madhya Pradesh (MP)         |
+| Bhopal                               | Madhya Pradesh (MP)         |
+| Burhanpur                            | Madhya Pradesh (MP)         |
+| Chhatarpur                           | Madhya Pradesh (MP)         |
+| Chhindwara                           | Madhya Pradesh (MP)         |
+| Damoh                                | Madhya Pradesh (MP)         |
+| Datia                                | Madhya Pradesh (MP)         |
+| Dewas                                | Madhya Pradesh (MP)         |
+| Dhar                                 | Madhya Pradesh (MP)         |
+| Dindori                              | Madhya Pradesh (MP)         |
+| Guna                                 | Madhya Pradesh (MP)         |
+| Gwalior                              | Madhya Pradesh (MP)         |
+| Harda                                | Madhya Pradesh (MP)         |
+| Hoshangabad                          | Madhya Pradesh (MP)         |
+| Indore                               | Madhya Pradesh (MP)         |
+| Jabalpur                             | Madhya Pradesh (MP)         |
+| Jhabua                               | Madhya Pradesh (MP)         |
+| Katni                                | Madhya Pradesh (MP)         |
+| Khandwa (East Nimar)                 | Madhya Pradesh (MP)         |
+| Khargone (West Nimar)                | Madhya Pradesh (MP)         |
+| Mandla                               | Madhya Pradesh (MP)         |
+| Mandsaur                             | Madhya Pradesh (MP)         |
+| Morena                               | Madhya Pradesh (MP)         |
+| Narsinghpur                          | Madhya Pradesh (MP)         |
+| Neemuch                              | Madhya Pradesh (MP)         |
+| Panna                                | Madhya Pradesh (MP)         |
+| Raisen                               | Madhya Pradesh (MP)         |
+| Rajgarh                              | Madhya Pradesh (MP)         |
+| Ratlam                               | Madhya Pradesh (MP)         |
+| Rewa                                 | Madhya Pradesh (MP)         |
+| Sagar                                | Madhya Pradesh (MP)         |
+| Satna                                | Madhya Pradesh (MP)         |
+| Sehore                               | Madhya Pradesh (MP)         |
+| Seoni                                | Madhya Pradesh (MP)         |
+| Shahdol                              | Madhya Pradesh (MP)         |
+| Shajapur                             | Madhya Pradesh (MP)         |
+| Sheopur                              | Madhya Pradesh (MP)         |
+| Shivpuri                             | Madhya Pradesh (MP)         |
+| Sidhi                                | Madhya Pradesh (MP)         |
+| Singrauli                            | Madhya Pradesh (MP)         |
+| Tikamgarh                            | Madhya Pradesh (MP)         |
+| Ujjain                               | Madhya Pradesh (MP)         |
+| Umaria                               | Madhya Pradesh (MP)         |
+| Vidisha                              | Madhya Pradesh (MP)         |
+| Ahmednagar                           | Maharashtra (MH)            |
+| Akola                                | Maharashtra (MH)            |
+| Amravati                             | Maharashtra (MH)            |
+| Aurangabad                           | Maharashtra (MH)            |
+| Beed                                 | Maharashtra (MH)            |
+| Bhandara                             | Maharashtra (MH)            |
+| Buldhana                             | Maharashtra (MH)            |
+| Chandrapur                           | Maharashtra (MH)            |
+| Dhule                                | Maharashtra (MH)            |
+| Gadchiroli                           | Maharashtra (MH)            |
+| Gondia                               | Maharashtra (MH)            |
+| Hingoli                              | Maharashtra (MH)            |
+| Jalgaon                              | Maharashtra (MH)            |
+| Jalna                                | Maharashtra (MH)            |
+| Kolhapur                             | Maharashtra (MH)            |
+| Latur                                | Maharashtra (MH)            |
+| Mumbai City                          | Maharashtra (MH)            |
+| Mumbai suburban                      | Maharashtra (MH)            |
+| Nanded                               | Maharashtra (MH)            |
+| Nandurbar                            | Maharashtra (MH)            |
+| Nagpur                               | Maharashtra (MH)            |
+| Nashik                               | Maharashtra (MH)            |
+| Osmanabad                            | Maharashtra (MH)            |
+| Parbhani                             | Maharashtra (MH)            |
+| Pune                                 | Maharashtra (MH)            |
+| Raigad                               | Maharashtra (MH)            |
+| Ratnagiri                            | Maharashtra (MH)            |
+| Sangli                               | Maharashtra (MH)            |
+| Satara                               | Maharashtra (MH)            |
+| Sindhudurg                           | Maharashtra (MH)            |
+| Solapur                              | Maharashtra (MH)            |
+| Thane                                | Maharashtra (MH)            |
+| Wardha                               | Maharashtra (MH)            |
+| Washim                               | Maharashtra (MH)            |
+| Yavatmal                             | Maharashtra (MH)            |
+| Bishnupur                            | Manipur (MN)                |
+| Churachandpur                        | Manipur (MN)                |
+| Chandel                              | Manipur (MN)                |
+| Imphal East                          | Manipur (MN)                |
+| Senapati                             | Manipur (MN)                |
+| Tamenglong                           | Manipur (MN)                |
+| Thoubal                              | Manipur (MN)                |
+| Ukhrul                               | Manipur (MN)                |
+| Imphal West                          | Manipur (MN)                |
+| East Garo Hills                      | Meghalaya (ML)              |
+| East Khasi Hills                     | Meghalaya (ML)              |
+| Jaintia Hills                        | Meghalaya (ML)              |
+| Ri Bhoi                              | Meghalaya (ML)              |
+| South Garo Hills                     | Meghalaya (ML)              |
+| West Garo Hills                      | Meghalaya (ML)              |
+| West Khasi Hills                     | Meghalaya (ML)              |
+| Aizawl                               | Mizoram (MZ)                |
+| Champhai                             | Mizoram (MZ)                |
+| Kolasib                              | Mizoram (MZ)                |
+| Lawngtlai                            | Mizoram (MZ)                |
+| Lunglei                              | Mizoram (MZ)                |
+| Mamit                                | Mizoram (MZ)                |
+| Saiha                                | Mizoram (MZ)                |
+| Serchhip                             | Mizoram (MZ)                |
+| Dimapur                              | Nagaland (NL)               |
+| Kiphire                              | Nagaland (NL)               |
+| Kohima                               | Nagaland (NL)               |
+| Longleng                             | Nagaland (NL)               |
+| Mokokchung                           | Nagaland (NL)               |
+| Mon                                  | Nagaland (NL)               |
+| Peren                                | Nagaland (NL)               |
+| Phek                                 | Nagaland (NL)               |
+| Tuensang                             | Nagaland (NL)               |
+| Wokha                                | Nagaland (NL)               |
+| Zunheboto                            | Nagaland (NL)               |
+| Angul                                | Odisha (OD)                 |
+| Boudh (Bauda)                        | Odisha (OD)                 |
+| Bhadrak                              | Odisha (OD)                 |
+| Balangir                             | Odisha (OD)                 |
+| Bargarh (Baragarh)                   | Odisha (OD)                 |
+| Balasore                             | Odisha (OD)                 |
+| Cuttack                              | Odisha (OD)                 |
+| Debagarh (Deogarh)                   | Odisha (OD)                 |
+| Dhenkanal                            | Odisha (OD)                 |
+| Ganjam                               | Odisha (OD)                 |
+| Gajapati                             | Odisha (OD)                 |
+| Jharsuguda                           | Odisha (OD)                 |
+| Jajpur                               | Odisha (OD)                 |
+| Jagatsinghpur                        | Odisha (OD)                 |
+| Khordha                              | Odisha (OD)                 |
+| Kendujhar (Keonjhar)                 | Odisha (OD)                 |
+| Kalahandi                            | Odisha (OD)                 |
+| Kandhamal                            | Odisha (OD)                 |
+| Koraput                              | Odisha (OD)                 |
+| Kendrapara                           | Odisha (OD)                 |
+| Malkangiri                           | Odisha (OD)                 |
+| Mayurbhanj                           | Odisha (OD)                 |
+| Nabarangpur                          | Odisha (OD)                 |
+| Nuapada                              | Odisha (OD)                 |
+| Nayagarh                             | Odisha (OD)                 |
+| Puri                                 | Odisha (OD)                 |
+| Rayagada                             | Odisha (OD)                 |
+| Sambalpur                            | Odisha (OD)                 |
+| Subarnapur (Sonepur)                 | Odisha (OD)                 |
+| Sundergarh                           | Odisha (OD)                 |
+| Karaikal                             | Puducherry (PY)             |
+| Mahe                                 | Puducherry (PY)             |
+| Pondicherry                          | Puducherry (PY)             |
+| Yanam                                | Puducherry (PY)             |
+| Amritsar                             | Punjab (PB)                 |
+| Barnala                              | Punjab (PB)                 |
+| Bathinda                             | Punjab (PB)                 |
+| Firozpur                             | Punjab (PB)                 |
+| Faridkot                             | Punjab (PB)                 |
+| Fatehgarh Sahib                      | Punjab (PB)                 |
+| Fazilka[6]                           | Punjab (PB)                 |
+| Gurdaspur                            | Punjab (PB)                 |
+| Hoshiarpur                           | Punjab (PB)                 |
+| Jalandhar                            | Punjab (PB)                 |
+| Kapurthala                           | Punjab (PB)                 |
+| Ludhiana                             | Punjab (PB)                 |
+| Mansa                                | Punjab (PB)                 |
+| Moga                                 | Punjab (PB)                 |
+| Sri Muktsar Sahib                    | Punjab (PB)                 |
+| Pathankot                            | Punjab (PB)                 |
+| Patiala                              | Punjab (PB)                 |
+| Rupnagar                             | Punjab (PB)                 |
+| Ajitgarh (Mohali)                    | Punjab (PB)                 |
+| Sangrur                              | Punjab (PB)                 |
+| Shahid Bhagat Singh Nagar            | Punjab (PB)                 |
+| Tarn Taran                           | Punjab (PB)                 |
+| Ajmer                                | Rajasthan (RJ)              |
+| Alwar                                | Rajasthan (RJ)              |
+| Bikaner                              | Rajasthan (RJ)              |
+| Barmer                               | Rajasthan (RJ)              |
+| Banswara                             | Rajasthan (RJ)              |
+| Bharatpur                            | Rajasthan (RJ)              |
+| Baran                                | Rajasthan (RJ)              |
+| Bundi                                | Rajasthan (RJ)              |
+| Bhilwara                             | Rajasthan (RJ)              |
+| Churu                                | Rajasthan (RJ)              |
+| Chittorgarh                          | Rajasthan (RJ)              |
+| Dausa                                | Rajasthan (RJ)              |
+| Dholpur                              | Rajasthan (RJ)              |
+| Dungapur                             | Rajasthan (RJ)              |
+| Ganganagar                           | Rajasthan (RJ)              |
+| Hanumangarh                          | Rajasthan (RJ)              |
+| Jhunjhunu                            | Rajasthan (RJ)              |
+| Jalore                               | Rajasthan (RJ)              |
+| Jodhpur                              | Rajasthan (RJ)              |
+| Jaipur                               | Rajasthan (RJ)              |
+| Jaisalmer                            | Rajasthan (RJ)              |
+| Jhalawar                             | Rajasthan (RJ)              |
+| Karauli                              | Rajasthan (RJ)              |
+| Kota                                 | Rajasthan (RJ)              |
+| Nagaur                               | Rajasthan (RJ)              |
+| Pali                                 | Rajasthan (RJ)              |
+| Pratapgarh                           | Rajasthan (RJ)              |
+| Rajsamand                            | Rajasthan (RJ)              |
+| Sikar                                | Rajasthan (RJ)              |
+| Sawai Madhopur                       | Rajasthan (RJ)              |
+| Sirohi                               | Rajasthan (RJ)              |
+| Tonk                                 | Rajasthan (RJ)              |
+| Udaipur                              | Rajasthan (RJ)              |
+| East Sikkim                          | Sikkim (SK)                 |
+| North Sikkim                         | Sikkim (SK)                 |
+| South Sikkim                         | Sikkim (SK)                 |
+| West Sikkim                          | Sikkim (SK)                 |
+| Ariyalur                             | Tamil Nadu (TN)             |
+| Chennai                              | Tamil Nadu (TN)             |
+| Coimbatore                           | Tamil Nadu (TN)             |
+| Cuddalore                            | Tamil Nadu (TN)             |
+| Dharmapuri                           | Tamil Nadu (TN)             |
+| Dindigul                             | Tamil Nadu (TN)             |
+| Erode                                | Tamil Nadu (TN)             |
+| Kanchipuram                          | Tamil Nadu (TN)             |
+| Kanyakumari                          | Tamil Nadu (TN)             |
+| Karur                                | Tamil Nadu (TN)             |
+| Krishnagiri                          | Tamil Nadu (TN)             |
+| Madurai                              | Tamil Nadu (TN)             |
+| Nagapattinam                         | Tamil Nadu (TN)             |
+| Nilgiris                             | Tamil Nadu (TN)             |
+| Namakkal                             | Tamil Nadu (TN)             |
+| Perambalur                           | Tamil Nadu (TN)             |
+| Pudukkottai                          | Tamil Nadu (TN)             |
+| Ramanathapuram                       | Tamil Nadu (TN)             |
+| Salem                                | Tamil Nadu (TN)             |
+| Sivaganga                            | Tamil Nadu (TN)             |
+| Tirupur                              | Tamil Nadu (TN)             |
+| Tiruchirappalli                      | Tamil Nadu (TN)             |
+| Theni                                | Tamil Nadu (TN)             |
+| Tirunelveli                          | Tamil Nadu (TN)             |
+| Thanjavur                            | Tamil Nadu (TN)             |
+| Thoothukudi                          | Tamil Nadu (TN)             |
+| Tiruvallur                           | Tamil Nadu (TN)             |
+| Tiruvarur                            | Tamil Nadu (TN)             |
+| Tiruvannamalai                       | Tamil Nadu (TN)             |
+| Vellore                              | Tamil Nadu (TN)             |
+| Viluppuram                           | Tamil Nadu (TN)             |
+| Virudhunagar                         | Tamil Nadu (TN)             |
+| Dhalai                               | Tripura (TR)                |
+| North Tripura                        | Tripura (TR)                |
+| South Tripura                        | Tripura (TR)                |
+| Khowai[7]                            | Tripura (TR)                |
+| West Tripura                         | Tripura (TR)                |
+| Agra                                 | Uttar Pradesh (UP)          |
+| Aligarh                              | Uttar Pradesh (UP)          |
+| Allahabad                            | Uttar Pradesh (UP)          |
+| Ambedkar Nagar                       | Uttar Pradesh (UP)          |
+| Auraiya                              | Uttar Pradesh (UP)          |
+| Azamgarh                             | Uttar Pradesh (UP)          |
+| Bagpat                               | Uttar Pradesh (UP)          |
+| Bahraich                             | Uttar Pradesh (UP)          |
+| Ballia                               | Uttar Pradesh (UP)          |
+| Balrampur                            | Uttar Pradesh (UP)          |
+| Banda                                | Uttar Pradesh (UP)          |
+| Barabanki                            | Uttar Pradesh (UP)          |
+| Bareilly                             | Uttar Pradesh (UP)          |
+| Basti                                | Uttar Pradesh (UP)          |
+| Bijnor                               | Uttar Pradesh (UP)          |
+| Budaun                               | Uttar Pradesh (UP)          |
+| Bulandshahr                          | Uttar Pradesh (UP)          |
+| Chandauli                            | Uttar Pradesh (UP)          |
+| Chhatrapati Shahuji Maharaj Nagar[8] | Uttar Pradesh (UP)          |
+| Chitrakoot                           | Uttar Pradesh (UP)          |
+| Deoria                               | Uttar Pradesh (UP)          |
+| Etah                                 | Uttar Pradesh (UP)          |
+| Etawah                               | Uttar Pradesh (UP)          |
+| Faizabad                             | Uttar Pradesh (UP)          |
+| Farrukhabad                          | Uttar Pradesh (UP)          |
+| Fatehpur                             | Uttar Pradesh (UP)          |
+| Firozabad                            | Uttar Pradesh (UP)          |
+| Gautam Buddh Nagar                   | Uttar Pradesh (UP)          |
+| Ghaziabad                            | Uttar Pradesh (UP)          |
+| Ghazipur                             | Uttar Pradesh (UP)          |
+| Gonda                                | Uttar Pradesh (UP)          |
+| Gorakhpur                            | Uttar Pradesh (UP)          |
+| Hamirpur                             | Uttar Pradesh (UP)          |
+| Hardoi                               | Uttar Pradesh (UP)          |
+| Hathras                              | Uttar Pradesh (UP)          |
+| Jalaun                               | Uttar Pradesh (UP)          |
+| Jaunpur district                     | Uttar Pradesh (UP)          |
+| Jhansi                               | Uttar Pradesh (UP)          |
+| Jyotiba Phule Nagar                  | Uttar Pradesh (UP)          |
+| Kannauj                              | Uttar Pradesh (UP)          |
+| Kanpur                               | Uttar Pradesh (UP)          |
+| Kanshi Ram Nagar                     | Uttar Pradesh (UP)          |
+| Kaushambi                            | Uttar Pradesh (UP)          |
+| Kushinagar                           | Uttar Pradesh (UP)          |
+| Lakhimpur Kheri                      | Uttar Pradesh (UP)          |
+| Lalitpur                             | Uttar Pradesh (UP)          |
+| Lucknow                              | Uttar Pradesh (UP)          |
+| Maharajganj                          | Uttar Pradesh (UP)          |
+| Mahoba                               | Uttar Pradesh (UP)          |
+| Mainpuri                             | Uttar Pradesh (UP)          |
+| Mathura                              | Uttar Pradesh (UP)          |
+| Mau                                  | Uttar Pradesh (UP)          |
+| Meerut                               | Uttar Pradesh (UP)          |
+| Mirzapur                             | Uttar Pradesh (UP)          |
+| Moradabad                            | Uttar Pradesh (UP)          |
+| Muzaffarnagar                        | Uttar Pradesh (UP)          |
+| Panchsheel Nagar district (Hapur)    | Uttar Pradesh (UP)          |
+| Pilibhit                             | Uttar Pradesh (UP)          |
+| Pratapgarh                           | Uttar Pradesh (UP)          |
+| Raebareli                            | Uttar Pradesh (UP)          |
+| Ramabai Nagar (Kanpur Dehat)         | Uttar Pradesh (UP)          |
+| Rampur                               | Uttar Pradesh (UP)          |
+| Saharanpur                           | Uttar Pradesh (UP)          |
+| Sant Kabir Nagar                     | Uttar Pradesh (UP)          |
+| Sant Ravidas Nagar                   | Uttar Pradesh (UP)          |
+| Shahjahanpur                         | Uttar Pradesh (UP)          |
+| Shamli[9]                            | Uttar Pradesh (UP)          |
+| Shravasti                            | Uttar Pradesh (UP)          |
+| Siddharthnagar                       | Uttar Pradesh (UP)          |
+| Sitapur                              | Uttar Pradesh (UP)          |
+| Sonbhadra                            | Uttar Pradesh (UP)          |
+| Sultanpur                            | Uttar Pradesh (UP)          |
+| Unnao                                | Uttar Pradesh (UP)          |
+| Varanasi                             | Uttar Pradesh (UP)          |
+| Almora                               | Uttarakhand (UK)            |
+| Bageshwar                            | Uttarakhand (UK)            |
+| Chamoli                              | Uttarakhand (UK)            |
+| Champawat                            | Uttarakhand (UK)            |
+| Dehradun                             | Uttarakhand (UK)            |
+| Haridwar                             | Uttarakhand (UK)            |
+| Nainital                             | Uttarakhand (UK)            |
+| Pauri Garhwal                        | Uttarakhand (UK)            |
+| Pithoragarh                          | Uttarakhand (UK)            |
+| Rudraprayag                          | Uttarakhand (UK)            |
+| Tehri Garhwal                        | Uttarakhand (UK)            |
+| Udham Singh Nagar                    | Uttarakhand (UK)            |
+| Uttarkashi                           | Uttarakhand (UK)            |
+| Bankura                              | West Bengal (WB)            |
+| Bardhaman                            | West Bengal (WB)            |
+| Birbhum                              | West Bengal (WB)            |
+| Cooch Behar                          | West Bengal (WB)            |
+| Dakshin Dinajpur                     | West Bengal (WB)            |
+| Darjeeling                           | West Bengal (WB)            |
+| Hooghly                              | West Bengal (WB)            |
+| Howrah                               | West Bengal (WB)            |
+| Jalpaiguri                           | West Bengal (WB)            |
+| Kolkata                              | West Bengal (WB)            |
+| Maldah                               | West Bengal (WB)            |
+| Murshidabad                          | West Bengal (WB)            |
+| Nadia                                | West Bengal (WB)            |
+| North 24 Parganas                    | West Bengal (WB)            |
+| Paschim Medinipur                    | West Bengal (WB)            |
+| Purba Medinipur                      | West Bengal (WB)            |
+| Purulia                              | West Bengal (WB)            |
+| South 24 Parganas                    | West Bengal (WB)            |
+| Uttar Dinajpur                       | West Bengal (WB)            |
++--------------------------------------+-----------------------------+
+645 rows in set (0.00 sec)
+
+
+
+mysql> create table const  select * from constituency;
+Query OK, 645 rows affected (0.86 sec)
+Records: 645  Duplicates: 0  Warnings: 0
+
+mysql> select * from const;
++--------------------------------------+-----------------------------+
+| district                             | state                       |
++--------------------------------------+-----------------------------+
+| North Andaman                        | Andaman and Nicobar (AN)    |
+| South Andaman                        | Andaman and Nicobar (AN)    |
+| Nicobar                              | Andaman and Nicobar (AN)    |
+| Adilabad                             | Andhra Pradesh (AP)         |
+| Anantapur                            | Andhra Pradesh (AP)         |
+| Chittoor                             | Andhra Pradesh (AP)         |
+| East Godavari                        | Andhra Pradesh (AP)         |
+| Guntur                               | Andhra Pradesh (AP)         |
+| Hyderabad                            | Andhra Pradesh (AP)         |
+| Karimnagar                           | Andhra Pradesh (AP)         |
+| Khammam                              | Andhra Pradesh (AP)         |
+| Krishna                              | Andhra Pradesh (AP)         |
+| Kurnool                              | Andhra Pradesh (AP)         |
+| Mahbubnagar                          | Andhra Pradesh (AP)         |
+| Medak                                | Andhra Pradesh (AP)         |
+| Nalgonda                             | Andhra Pradesh (AP)         |
+| Nizamabad                            | Andhra Pradesh (AP)         |
+| Prakasam                             | Andhra Pradesh (AP)         |
+| Ranga Reddy                          | Andhra Pradesh (AP)         |
+| Srikakulam                           | Andhra Pradesh (AP)         |
+| Sri Potti Sri Ramulu Nellore         | Andhra Pradesh (AP)         |
+| Vishakhapatnam                       | Andhra Pradesh (AP)         |
+| Vizianagaram                         | Andhra Pradesh (AP)         |
+| Warangal                             | Andhra Pradesh (AP)         |
+| West Godavari                        | Andhra Pradesh (AP)         |
+| Cudappah                             | Andhra Pradesh (AP)         |
+| Anjaw                                | Arunachal Pradesh (AR)      |
+| Changlang                            | Arunachal Pradesh (AR)      |
+| East Siang                           | Arunachal Pradesh (AR)      |
+| East Kameng                          | Arunachal Pradesh (AR)      |
+| Kurung Kumey                         | Arunachal Pradesh (AR)      |
+| Lohit                                | Arunachal Pradesh (AR)      |
+| Lower Dibang Valley                  | Arunachal Pradesh (AR)      |
+| Lower Subansiri                      | Arunachal Pradesh (AR)      |
+| Papum Pare                           | Arunachal Pradesh (AR)      |
+| Tawang                               | Arunachal Pradesh (AR)      |
+| Tirap                                | Arunachal Pradesh (AR)      |
+| Dibang Valley                        | Arunachal Pradesh (AR)      |
+| Upper Siang                          | Arunachal Pradesh (AR)      |
+| Upper Subansiri                      | Arunachal Pradesh (AR)      |
+| West Kameng                          | Arunachal Pradesh (AR)      |
+| West Siang                           | Arunachal Pradesh (AR)      |
+| Baksa                                | Assam (AS)                  |
+| Barpeta                              | Assam (AS)                  |
+| Bongaigaon                           | Assam (AS)                  |
+| Cachar                               | Assam (AS)                  |
+| Chirang                              | Assam (AS)                  |
+| Darrang                              | Assam (AS)                  |
+| Dhemaji                              | Assam (AS)                  |
+| Dima Hasao                           | Assam (AS)                  |
+| Dhubri                               | Assam (AS)                  |
+| Dibrugarh                            | Assam (AS)                  |
+| Goalpara                             | Assam (AS)                  |
+| Golaghat                             | Assam (AS)                  |
+| Hailakandi                           | Assam (AS)                  |
+| Jorhat                               | Assam (AS)                  |
+| Kamrup                               | Assam (AS)                  |
+| Kamrup Metropolitan                  | Assam (AS)                  |
+| Karbi Anglong                        | Assam (AS)                  |
+| Karimganj                            | Assam (AS)                  |
+| Kokrajhar                            | Assam (AS)                  |
+| Lakhimpur                            | Assam (AS)                  |
+| Morigaon                             | Assam (AS)                  |
+| Nagaon                               | Assam (AS)                  |
+| Nalbari                              | Assam (AS)                  |
+| Sivasagar                            | Assam (AS)                  |
+| Sonitpur                             | Assam (AS)                  |
+| Tinsukia                             | Assam (AS)                  |
+| Udalguri                             | Assam (AS)                  |
+| Araria                               | Bihar (BR)                  |
+| Arwal                                | Bihar (BR)                  |
+| Aurangabad                           | Bihar (BR)                  |
+| Banka                                | Bihar (BR)                  |
+| Begusarai                            | Bihar (BR)                  |
+| Bhagalpur                            | Bihar (BR)                  |
+| Bhojpur                              | Bihar (BR)                  |
+| Buxar                                | Bihar (BR)                  |
+| Darbhanga                            | Bihar (BR)                  |
+| East Champaran                       | Bihar (BR)                  |
+| Gaya                                 | Bihar (BR)                  |
+| Gopalganj                            | Bihar (BR)                  |
+| Jamui                                | Bihar (BR)                  |
+| Jehanabad                            | Bihar (BR)                  |
+| Kaimur                               | Bihar (BR)                  |
+| Katihar                              | Bihar (BR)                  |
+| Khagaria                             | Bihar (BR)                  |
+| Kishanganj                           | Bihar (BR)                  |
+| Lakhisarai                           | Bihar (BR)                  |
+| Madhepura                            | Bihar (BR)                  |
+| Madhubani                            | Bihar (BR)                  |
+| Munger                               | Bihar (BR)                  |
+| Muzaffarpur                          | Bihar (BR)                  |
+| Nalanda                              | Bihar (BR)                  |
+| Nawada                               | Bihar (BR)                  |
+| Patna                                | Bihar (BR)                  |
+| Purnia                               | Bihar (BR)                  |
+| Rohtas                               | Bihar (BR)                  |
+| Saharsa                              | Bihar (BR)                  |
+| Samastipur                           | Bihar (BR)                  |
+| Saran                                | Bihar (BR)                  |
+| Sheikhpura                           | Bihar (BR)                  |
+| Sheohar                              | Bihar (BR)                  |
+| Sitamarhi                            | Bihar (BR)                  |
+| Siwan                                | Bihar (BR)                  |
+| Supaul                               | Bihar (BR)                  |
+| Chandigarh                           | Chandigarh (CH)             |
+| Bastar                               | Chhattisgarh (CG)           |
+| Bijapur                              | Chhattisgarh (CG)           |
+| Bilaspur                             | Chhattisgarh (CG)           |
+| Dantewada                            | Chhattisgarh (CG)           |
+| Dhamtari                             | Chhattisgarh (CG)           |
+| Durg                                 | Chhattisgarh (CG)           |
+| Jashpur                              | Chhattisgarh (CG)           |
+| Janjgir-Champa                       | Chhattisgarh (CG)           |
+| Korba                                | Chhattisgarh (CG)           |
+| Koriya                               | Chhattisgarh (CG)           |
+| Kanker                               | Chhattisgarh (CG)           |
+| Kabirdham (formerly Kawardha)        | Chhattisgarh (CG)           |
+| Mahasamund                           | Chhattisgarh (CG)           |
+| Narayanpur                           | Chhattisgarh (CG)           |
+| Raigarh                              | Chhattisgarh (CG)           |
+| Rajnandgaon                          | Chhattisgarh (CG)           |
+| Raipur                               | Chhattisgarh (CG)           |
+| Surguja                              | Chhattisgarh (CG)           |
+| Dadra and Nagar Haveli               | Dadra and Nagar Haveli (DN) |
+| Daman                                | Daman and Diu (DD)          |
+| Diu                                  | Daman and Diu (DD)          |
+| Central Delhi                        | Delhi (DL)                  |
+| East Delhi                           | Delhi (DL)                  |
+| New Delhi                            | Delhi (DL)                  |
+| North Delhi                          | Delhi (DL)                  |
+| North East Delhi                     | Delhi (DL)                  |
+| North West Delhi                     | Delhi (DL)                  |
+| South Delhi                          | Delhi (DL)                  |
+| South West Delhi                     | Delhi (DL)                  |
+| West Delhi                           | Delhi (DL)                  |
+| North Goa                            | Goa (GA)                    |
+| South Goa                            | Goa (GA)                    |
+| Ahmedabad                            | Gujarat (GJ)                |
+| Amreli district                      | Gujarat (GJ)                |
+| Anand                                | Gujarat (GJ)                |
+| Banaskantha                          | Gujarat (GJ)                |
+| Bharuch                              | Gujarat (GJ)                |
+| Bhavnagar                            | Gujarat (GJ)                |
+| Dahod                                | Gujarat (GJ)                |
+| The Dangs                            | Gujarat (GJ)                |
+| Gandhinagar                          | Gujarat (GJ)                |
+| Jamnagar                             | Gujarat (GJ)                |
+| Junagadh                             | Gujarat (GJ)                |
+| Kutch                                | Gujarat (GJ)                |
+| Kheda                                | Gujarat (GJ)                |
+| Mehsana                              | Gujarat (GJ)                |
+| Narmada                              | Gujarat (GJ)                |
+| Navsari                              | Gujarat (GJ)                |
+| Patan                                | Gujarat (GJ)                |
+| Panchmahal                           | Gujarat (GJ)                |
+| Porbandar                            | Gujarat (GJ)                |
+| Rajkot                               | Gujarat (GJ)                |
+| Sabarkantha                          | Gujarat (GJ)                |
+| Surendranagar                        | Gujarat (GJ)                |
+| Surat                                | Gujarat (GJ)                |
+| Tapi                                 | Gujarat (GJ)                |
+| Vadodara                             | Gujarat (GJ)                |
+| Valsad                               | Gujarat (GJ)                |
+| Ambala                               | Haryana (HR)                |
+| Bhiwani                              | Haryana (HR)                |
+| Faridabad                            | Haryana (HR)                |
+| Fatehabad                            | Haryana (HR)                |
+| Gurgaon                              | Haryana (HR)                |
+| Hissar                               | Haryana (HR)                |
+| Jhajjar                              | Haryana (HR)                |
+| Jind                                 | Haryana (HR)                |
+| Karnal                               | Haryana (HR)                |
+| Kaithal                              | Haryana (HR)                |
+| Kurukshetra                          | Haryana (HR)                |
+| Mahendragarh                         | Haryana (HR)                |
+| Mewat                                | Haryana (HR)                |
+| Palwal                               | Haryana (HR)                |
+| Panchkula                            | Haryana (HR)                |
+| Panipat                              | Haryana (HR)                |
+| Rewari                               | Haryana (HR)                |
+| Rohtak                               | Haryana (HR)                |
+| Sirsa                                | Haryana (HR)                |
+| Sonipat                              | Haryana (HR)                |
+| Yamuna Nagar                         | Haryana (HR)                |
+| Bilaspur                             | Himachal Pradesh (HP)       |
+| Chamba                               | Himachal Pradesh (HP)       |
+| Hamirpur                             | Himachal Pradesh (HP)       |
+| Kangra                               | Himachal Pradesh (HP)       |
+| Kinnaur                              | Himachal Pradesh (HP)       |
+| Kullu                                | Himachal Pradesh (HP)       |
+| Lahaul and Spiti                     | Himachal Pradesh (HP)       |
+| Mandi                                | Himachal Pradesh (HP)       |
+| Shimla                               | Himachal Pradesh (HP)       |
+| Sirmaur                              | Himachal Pradesh (HP)       |
+| Solan                                | Himachal Pradesh (HP)       |
+| Una                                  | Himachal Pradesh (HP)       |
+| Anantnag                             | Jammu and Kashmir (JK)      |
+| Badgam                               | Jammu and Kashmir (JK)      |
+| Bandipora                            | Jammu and Kashmir (JK)      |
+| Baramulla                            | Jammu and Kashmir (JK)      |
+| Doda                                 | Jammu and Kashmir (JK)      |
+| Ganderbal                            | Jammu and Kashmir (JK)      |
+| Jammu                                | Jammu and Kashmir (JK)      |
+| Kargil                               | Jammu and Kashmir (JK)      |
+| Kathua                               | Jammu and Kashmir (JK)      |
+| Kishtwar                             | Jammu and Kashmir (JK)      |
+| Kupwara                              | Jammu and Kashmir (JK)      |
+| Kulgam                               | Jammu and Kashmir (JK)      |
+| Leh                                  | Jammu and Kashmir (JK)      |
+| Poonch                               | Jammu and Kashmir (JK)      |
+| Pulwama                              | Jammu and Kashmir (JK)      |
+| Rajouri                              | Jammu and Kashmir (JK)      |
+| Ramban                               | Jammu and Kashmir (JK)      |
+| Reasi                                | Jammu and Kashmir (JK)      |
+| Samba                                | Jammu and Kashmir (JK)      |
+| Shopian                              | Jammu and Kashmir (JK)      |
+| Srinagar                             | Jammu and Kashmir (JK)      |
+| Udhampur                             | Jammu and Kashmir (JK)      |
+| Bokaro                               | Jharkhand (JH)              |
+| Chatra                               | Jharkhand (JH)              |
+| Deoghar                              | Jharkhand (JH)              |
+| Dhanbad                              | Jharkhand (JH)              |
+| Dumka                                | Jharkhand (JH)              |
+| East Singhbhum                       | Jharkhand (JH)              |
+| Garhwa                               | Jharkhand (JH)              |
+| Giridih                              | Jharkhand (JH)              |
+| Godda                                | Jharkhand (JH)              |
+| Gumla                                | Jharkhand (JH)              |
+| Hazaribag                            | Jharkhand (JH)              |
+| Jamtara                              | Jharkhand (JH)              |
+| Khunti                               | Jharkhand (JH)              |
+| Koderma                              | Jharkhand (JH)              |
+| Latehar                              | Jharkhand (JH)              |
+| Lohardaga                            | Jharkhand (JH)              |
+| Pakur                                | Jharkhand (JH)              |
+| Palamu                               | Jharkhand (JH)              |
+| Ramgarh                              | Jharkhand (JH)              |
+| Ranchi                               | Jharkhand (JH)              |
+| Sahibganj                            | Jharkhand (JH)              |
+| Seraikela Kharsawan                  | Jharkhand (JH)              |
+| Simdega                              | Jharkhand (JH)              |
+| West Singhbhum                       | Jharkhand (JH)              |
+| Bagalkot                             | Karnataka (KA)              |
+| Bangalore Rural                      | Karnataka (KA)              |
+| Bangalore Urban                      | Karnataka (KA)              |
+| Belgaum                              | Karnataka (KA)              |
+| Bellary                              | Karnataka (KA)              |
+| Bidar                                | Karnataka (KA)              |
+| Bijapur                              | Karnataka (KA)              |
+| Chamarajnagar                        | Karnataka (KA)              |
+| Chikkamagaluru                       | Karnataka (KA)              |
+| Chikkaballapur                       | Karnataka (KA)              |
+| Chitradurga                          | Karnataka (KA)              |
+| Davanagere                           | Karnataka (KA)              |
+| Dharwad                              | Karnataka (KA)              |
+| Dakshina Kannada                     | Karnataka (KA)              |
+| Gadag                                | Karnataka (KA)              |
+| Gulbarga                             | Karnataka (KA)              |
+| Hassan                               | Karnataka (KA)              |
+| Haveri district                      | Karnataka (KA)              |
+| Kodagu                               | Karnataka (KA)              |
+| Kolar                                | Karnataka (KA)              |
+| Koppal                               | Karnataka (KA)              |
+| Mandya                               | Karnataka (KA)              |
+| Mysore                               | Karnataka (KA)              |
+| Raichur                              | Karnataka (KA)              |
+| Shimoga                              | Karnataka (KA)              |
+| Tumkur                               | Karnataka (KA)              |
+| Udupi                                | Karnataka (KA)              |
+| Uttara Kannada                       | Karnataka (KA)              |
+| Ramanagara                           | Karnataka (KA)              |
+| Yadgir                               | Karnataka (KA)              |
+| Alappuzha                            | Kerala (KL)                 |
+| Ernakulam                            | Kerala (KL)                 |
+| Idukki                               | Kerala (KL)                 |
+| Kannur                               | Kerala (KL)                 |
+| Kasaragod                            | Kerala (KL)                 |
+| Kollam                               | Kerala (KL)                 |
+| Kottayam                             | Kerala (KL)                 |
+| Kozhikode                            | Kerala (KL)                 |
+| Malappuram                           | Kerala (KL)                 |
+| Palakkad                             | Kerala (KL)                 |
+| Pathanamthitta                       | Kerala (KL)                 |
+| Thrissur                             | Kerala (KL)                 |
+| Thiruvananthapuram                   | Kerala (KL)                 |
+| Wayanad                              | Kerala (KL)                 |
+| Lakshadweep                          | Lakshdweep (LD)             |
+| Agar                                 | Madhya Pradesh (MP)         |
+| Alirajpur                            | Madhya Pradesh (MP)         |
+| Anuppur                              | Madhya Pradesh (MP)         |
+| Ashok Nagar                          | Madhya Pradesh (MP)         |
+| Balaghat                             | Madhya Pradesh (MP)         |
+| Barwani                              | Madhya Pradesh (MP)         |
+| Betul                                | Madhya Pradesh (MP)         |
+| Bhind                                | Madhya Pradesh (MP)         |
+| Bhopal                               | Madhya Pradesh (MP)         |
+| Burhanpur                            | Madhya Pradesh (MP)         |
+| Chhatarpur                           | Madhya Pradesh (MP)         |
+| Chhindwara                           | Madhya Pradesh (MP)         |
+| Damoh                                | Madhya Pradesh (MP)         |
+| Datia                                | Madhya Pradesh (MP)         |
+| Dewas                                | Madhya Pradesh (MP)         |
+| Dhar                                 | Madhya Pradesh (MP)         |
+| Dindori                              | Madhya Pradesh (MP)         |
+| Guna                                 | Madhya Pradesh (MP)         |
+| Gwalior                              | Madhya Pradesh (MP)         |
+| Harda                                | Madhya Pradesh (MP)         |
+| Hoshangabad                          | Madhya Pradesh (MP)         |
+| Indore                               | Madhya Pradesh (MP)         |
+| Jabalpur                             | Madhya Pradesh (MP)         |
+| Jhabua                               | Madhya Pradesh (MP)         |
+| Katni                                | Madhya Pradesh (MP)         |
+| Khandwa (East Nimar)                 | Madhya Pradesh (MP)         |
+| Khargone (West Nimar)                | Madhya Pradesh (MP)         |
+| Mandla                               | Madhya Pradesh (MP)         |
+| Mandsaur                             | Madhya Pradesh (MP)         |
+| Morena                               | Madhya Pradesh (MP)         |
+| Narsinghpur                          | Madhya Pradesh (MP)         |
+| Neemuch                              | Madhya Pradesh (MP)         |
+| Panna                                | Madhya Pradesh (MP)         |
+| Raisen                               | Madhya Pradesh (MP)         |
+| Rajgarh                              | Madhya Pradesh (MP)         |
+| Ratlam                               | Madhya Pradesh (MP)         |
+| Rewa                                 | Madhya Pradesh (MP)         |
+| Sagar                                | Madhya Pradesh (MP)         |
+| Satna                                | Madhya Pradesh (MP)         |
+| Sehore                               | Madhya Pradesh (MP)         |
+| Seoni                                | Madhya Pradesh (MP)         |
+| Shahdol                              | Madhya Pradesh (MP)         |
+| Shajapur                             | Madhya Pradesh (MP)         |
+| Sheopur                              | Madhya Pradesh (MP)         |
+| Shivpuri                             | Madhya Pradesh (MP)         |
+| Sidhi                                | Madhya Pradesh (MP)         |
+| Singrauli                            | Madhya Pradesh (MP)         |
+| Tikamgarh                            | Madhya Pradesh (MP)         |
+| Ujjain                               | Madhya Pradesh (MP)         |
+| Umaria                               | Madhya Pradesh (MP)         |
+| Vidisha                              | Madhya Pradesh (MP)         |
+| Ahmednagar                           | Maharashtra (MH)            |
+| Akola                                | Maharashtra (MH)            |
+| Amravati                             | Maharashtra (MH)            |
+| Aurangabad                           | Maharashtra (MH)            |
+| Beed                                 | Maharashtra (MH)            |
+| Bhandara                             | Maharashtra (MH)            |
+| Buldhana                             | Maharashtra (MH)            |
+| Chandrapur                           | Maharashtra (MH)            |
+| Dhule                                | Maharashtra (MH)            |
+| Gadchiroli                           | Maharashtra (MH)            |
+| Gondia                               | Maharashtra (MH)            |
+| Hingoli                              | Maharashtra (MH)            |
+| Jalgaon                              | Maharashtra (MH)            |
+| Jalna                                | Maharashtra (MH)            |
+| Kolhapur                             | Maharashtra (MH)            |
+| Latur                                | Maharashtra (MH)            |
+| Mumbai City                          | Maharashtra (MH)            |
+| Mumbai suburban                      | Maharashtra (MH)            |
+| Nanded                               | Maharashtra (MH)            |
+| Nandurbar                            | Maharashtra (MH)            |
+| Nagpur                               | Maharashtra (MH)            |
+| Nashik                               | Maharashtra (MH)            |
+| Osmanabad                            | Maharashtra (MH)            |
+| Parbhani                             | Maharashtra (MH)            |
+| Pune                                 | Maharashtra (MH)            |
+| Raigad                               | Maharashtra (MH)            |
+| Ratnagiri                            | Maharashtra (MH)            |
+| Sangli                               | Maharashtra (MH)            |
+| Satara                               | Maharashtra (MH)            |
+| Sindhudurg                           | Maharashtra (MH)            |
+| Solapur                              | Maharashtra (MH)            |
+| Thane                                | Maharashtra (MH)            |
+| Wardha                               | Maharashtra (MH)            |
+| Washim                               | Maharashtra (MH)            |
+| Yavatmal                             | Maharashtra (MH)            |
+| Bishnupur                            | Manipur (MN)                |
+| Churachandpur                        | Manipur (MN)                |
+| Chandel                              | Manipur (MN)                |
+| Imphal East                          | Manipur (MN)                |
+| Senapati                             | Manipur (MN)                |
+| Tamenglong                           | Manipur (MN)                |
+| Thoubal                              | Manipur (MN)                |
+| Ukhrul                               | Manipur (MN)                |
+| Imphal West                          | Manipur (MN)                |
+| East Garo Hills                      | Meghalaya (ML)              |
+| East Khasi Hills                     | Meghalaya (ML)              |
+| Jaintia Hills                        | Meghalaya (ML)              |
+| Ri Bhoi                              | Meghalaya (ML)              |
+| South Garo Hills                     | Meghalaya (ML)              |
+| West Garo Hills                      | Meghalaya (ML)              |
+| West Khasi Hills                     | Meghalaya (ML)              |
+| Aizawl                               | Mizoram (MZ)                |
+| Champhai                             | Mizoram (MZ)                |
+| Kolasib                              | Mizoram (MZ)                |
+| Lawngtlai                            | Mizoram (MZ)                |
+| Lunglei                              | Mizoram (MZ)                |
+| Mamit                                | Mizoram (MZ)                |
+| Saiha                                | Mizoram (MZ)                |
+| Serchhip                             | Mizoram (MZ)                |
+| Dimapur                              | Nagaland (NL)               |
+| Kiphire                              | Nagaland (NL)               |
+| Kohima                               | Nagaland (NL)               |
+| Longleng                             | Nagaland (NL)               |
+| Mokokchung                           | Nagaland (NL)               |
+| Mon                                  | Nagaland (NL)               |
+| Peren                                | Nagaland (NL)               |
+| Phek                                 | Nagaland (NL)               |
+| Tuensang                             | Nagaland (NL)               |
+| Wokha                                | Nagaland (NL)               |
+| Zunheboto                            | Nagaland (NL)               |
+| Angul                                | Odisha (OD)                 |
+| Boudh (Bauda)                        | Odisha (OD)                 |
+| Bhadrak                              | Odisha (OD)                 |
+| Balangir                             | Odisha (OD)                 |
+| Bargarh (Baragarh)                   | Odisha (OD)                 |
+| Balasore                             | Odisha (OD)                 |
+| Cuttack                              | Odisha (OD)                 |
+| Debagarh (Deogarh)                   | Odisha (OD)                 |
+| Dhenkanal                            | Odisha (OD)                 |
+| Ganjam                               | Odisha (OD)                 |
+| Gajapati                             | Odisha (OD)                 |
+| Jharsuguda                           | Odisha (OD)                 |
+| Jajpur                               | Odisha (OD)                 |
+| Jagatsinghpur                        | Odisha (OD)                 |
+| Khordha                              | Odisha (OD)                 |
+| Kendujhar (Keonjhar)                 | Odisha (OD)                 |
+| Kalahandi                            | Odisha (OD)                 |
+| Kandhamal                            | Odisha (OD)                 |
+| Koraput                              | Odisha (OD)                 |
+| Kendrapara                           | Odisha (OD)                 |
+| Malkangiri                           | Odisha (OD)                 |
+| Mayurbhanj                           | Odisha (OD)                 |
+| Nabarangpur                          | Odisha (OD)                 |
+| Nuapada                              | Odisha (OD)                 |
+| Nayagarh                             | Odisha (OD)                 |
+| Puri                                 | Odisha (OD)                 |
+| Rayagada                             | Odisha (OD)                 |
+| Sambalpur                            | Odisha (OD)                 |
+| Subarnapur (Sonepur)                 | Odisha (OD)                 |
+| Sundergarh                           | Odisha (OD)                 |
+| Karaikal                             | Puducherry (PY)             |
+| Mahe                                 | Puducherry (PY)             |
+| Pondicherry                          | Puducherry (PY)             |
+| Yanam                                | Puducherry (PY)             |
+| Amritsar                             | Punjab (PB)                 |
+| Barnala                              | Punjab (PB)                 |
+| Bathinda                             | Punjab (PB)                 |
+| Firozpur                             | Punjab (PB)                 |
+| Faridkot                             | Punjab (PB)                 |
+| Fatehgarh Sahib                      | Punjab (PB)                 |
+| Fazilka[6]                           | Punjab (PB)                 |
+| Gurdaspur                            | Punjab (PB)                 |
+| Hoshiarpur                           | Punjab (PB)                 |
+| Jalandhar                            | Punjab (PB)                 |
+| Kapurthala                           | Punjab (PB)                 |
+| Ludhiana                             | Punjab (PB)                 |
+| Mansa                                | Punjab (PB)                 |
+| Moga                                 | Punjab (PB)                 |
+| Sri Muktsar Sahib                    | Punjab (PB)                 |
+| Pathankot                            | Punjab (PB)                 |
+| Patiala                              | Punjab (PB)                 |
+| Rupnagar                             | Punjab (PB)                 |
+| Ajitgarh (Mohali)                    | Punjab (PB)                 |
+| Sangrur                              | Punjab (PB)                 |
+| Shahid Bhagat Singh Nagar            | Punjab (PB)                 |
+| Tarn Taran                           | Punjab (PB)                 |
+| Ajmer                                | Rajasthan (RJ)              |
+| Alwar                                | Rajasthan (RJ)              |
+| Bikaner                              | Rajasthan (RJ)              |
+| Barmer                               | Rajasthan (RJ)              |
+| Banswara                             | Rajasthan (RJ)              |
+| Bharatpur                            | Rajasthan (RJ)              |
+| Baran                                | Rajasthan (RJ)              |
+| Bundi                                | Rajasthan (RJ)              |
+| Bhilwara                             | Rajasthan (RJ)              |
+| Churu                                | Rajasthan (RJ)              |
+| Chittorgarh                          | Rajasthan (RJ)              |
+| Dausa                                | Rajasthan (RJ)              |
+| Dholpur                              | Rajasthan (RJ)              |
+| Dungapur                             | Rajasthan (RJ)              |
+| Ganganagar                           | Rajasthan (RJ)              |
+| Hanumangarh                          | Rajasthan (RJ)              |
+| Jhunjhunu                            | Rajasthan (RJ)              |
+| Jalore                               | Rajasthan (RJ)              |
+| Jodhpur                              | Rajasthan (RJ)              |
+| Jaipur                               | Rajasthan (RJ)              |
+| Jaisalmer                            | Rajasthan (RJ)              |
+| Jhalawar                             | Rajasthan (RJ)              |
+| Karauli                              | Rajasthan (RJ)              |
+| Kota                                 | Rajasthan (RJ)              |
+| Nagaur                               | Rajasthan (RJ)              |
+| Pali                                 | Rajasthan (RJ)              |
+| Pratapgarh                           | Rajasthan (RJ)              |
+| Rajsamand                            | Rajasthan (RJ)              |
+| Sikar                                | Rajasthan (RJ)              |
+| Sawai Madhopur                       | Rajasthan (RJ)              |
+| Sirohi                               | Rajasthan (RJ)              |
+| Tonk                                 | Rajasthan (RJ)              |
+| Udaipur                              | Rajasthan (RJ)              |
+| East Sikkim                          | Sikkim (SK)                 |
+| North Sikkim                         | Sikkim (SK)                 |
+| South Sikkim                         | Sikkim (SK)                 |
+| West Sikkim                          | Sikkim (SK)                 |
+| Ariyalur                             | Tamil Nadu (TN)             |
+| Chennai                              | Tamil Nadu (TN)             |
+| Coimbatore                           | Tamil Nadu (TN)             |
+| Cuddalore                            | Tamil Nadu (TN)             |
+| Dharmapuri                           | Tamil Nadu (TN)             |
+| Dindigul                             | Tamil Nadu (TN)             |
+| Erode                                | Tamil Nadu (TN)             |
+| Kanchipuram                          | Tamil Nadu (TN)             |
+| Kanyakumari                          | Tamil Nadu (TN)             |
+| Karur                                | Tamil Nadu (TN)             |
+| Krishnagiri                          | Tamil Nadu (TN)             |
+| Madurai                              | Tamil Nadu (TN)             |
+| Nagapattinam                         | Tamil Nadu (TN)             |
+| Nilgiris                             | Tamil Nadu (TN)             |
+| Namakkal                             | Tamil Nadu (TN)             |
+| Perambalur                           | Tamil Nadu (TN)             |
+| Pudukkottai                          | Tamil Nadu (TN)             |
+| Ramanathapuram                       | Tamil Nadu (TN)             |
+| Salem                                | Tamil Nadu (TN)             |
+| Sivaganga                            | Tamil Nadu (TN)             |
+| Tirupur                              | Tamil Nadu (TN)             |
+| Tiruchirappalli                      | Tamil Nadu (TN)             |
+| Theni                                | Tamil Nadu (TN)             |
+| Tirunelveli                          | Tamil Nadu (TN)             |
+| Thanjavur                            | Tamil Nadu (TN)             |
+| Thoothukudi                          | Tamil Nadu (TN)             |
+| Tiruvallur                           | Tamil Nadu (TN)             |
+| Tiruvarur                            | Tamil Nadu (TN)             |
+| Tiruvannamalai                       | Tamil Nadu (TN)             |
+| Vellore                              | Tamil Nadu (TN)             |
+| Viluppuram                           | Tamil Nadu (TN)             |
+| Virudhunagar                         | Tamil Nadu (TN)             |
+| Dhalai                               | Tripura (TR)                |
+| North Tripura                        | Tripura (TR)                |
+| South Tripura                        | Tripura (TR)                |
+| Khowai[7]                            | Tripura (TR)                |
+| West Tripura                         | Tripura (TR)                |
+| Agra                                 | Uttar Pradesh (UP)          |
+| Aligarh                              | Uttar Pradesh (UP)          |
+| Allahabad                            | Uttar Pradesh (UP)          |
+| Ambedkar Nagar                       | Uttar Pradesh (UP)          |
+| Auraiya                              | Uttar Pradesh (UP)          |
+| Azamgarh                             | Uttar Pradesh (UP)          |
+| Bagpat                               | Uttar Pradesh (UP)          |
+| Bahraich                             | Uttar Pradesh (UP)          |
+| Ballia                               | Uttar Pradesh (UP)          |
+| Balrampur                            | Uttar Pradesh (UP)          |
+| Banda                                | Uttar Pradesh (UP)          |
+| Barabanki                            | Uttar Pradesh (UP)          |
+| Bareilly                             | Uttar Pradesh (UP)          |
+| Basti                                | Uttar Pradesh (UP)          |
+| Bijnor                               | Uttar Pradesh (UP)          |
+| Budaun                               | Uttar Pradesh (UP)          |
+| Bulandshahr                          | Uttar Pradesh (UP)          |
+| Chandauli                            | Uttar Pradesh (UP)          |
+| Chhatrapati Shahuji Maharaj Nagar[8] | Uttar Pradesh (UP)          |
+| Chitrakoot                           | Uttar Pradesh (UP)          |
+| Deoria                               | Uttar Pradesh (UP)          |
+| Etah                                 | Uttar Pradesh (UP)          |
+| Etawah                               | Uttar Pradesh (UP)          |
+| Faizabad                             | Uttar Pradesh (UP)          |
+| Farrukhabad                          | Uttar Pradesh (UP)          |
+| Fatehpur                             | Uttar Pradesh (UP)          |
+| Firozabad                            | Uttar Pradesh (UP)          |
+| Gautam Buddh Nagar                   | Uttar Pradesh (UP)          |
+| Ghaziabad                            | Uttar Pradesh (UP)          |
+| Ghazipur                             | Uttar Pradesh (UP)          |
+| Gonda                                | Uttar Pradesh (UP)          |
+| Gorakhpur                            | Uttar Pradesh (UP)          |
+| Hamirpur                             | Uttar Pradesh (UP)          |
+| Hardoi                               | Uttar Pradesh (UP)          |
+| Hathras                              | Uttar Pradesh (UP)          |
+| Jalaun                               | Uttar Pradesh (UP)          |
+| Jaunpur district                     | Uttar Pradesh (UP)          |
+| Jhansi                               | Uttar Pradesh (UP)          |
+| Jyotiba Phule Nagar                  | Uttar Pradesh (UP)          |
+| Kannauj                              | Uttar Pradesh (UP)          |
+| Kanpur                               | Uttar Pradesh (UP)          |
+| Kanshi Ram Nagar                     | Uttar Pradesh (UP)          |
+| Kaushambi                            | Uttar Pradesh (UP)          |
+| Kushinagar                           | Uttar Pradesh (UP)          |
+| Lakhimpur Kheri                      | Uttar Pradesh (UP)          |
+| Lalitpur                             | Uttar Pradesh (UP)          |
+| Lucknow                              | Uttar Pradesh (UP)          |
+| Maharajganj                          | Uttar Pradesh (UP)          |
+| Mahoba                               | Uttar Pradesh (UP)          |
+| Mainpuri                             | Uttar Pradesh (UP)          |
+| Mathura                              | Uttar Pradesh (UP)          |
+| Mau                                  | Uttar Pradesh (UP)          |
+| Meerut                               | Uttar Pradesh (UP)          |
+| Mirzapur                             | Uttar Pradesh (UP)          |
+| Moradabad                            | Uttar Pradesh (UP)          |
+| Muzaffarnagar                        | Uttar Pradesh (UP)          |
+| Panchsheel Nagar district (Hapur)    | Uttar Pradesh (UP)          |
+| Pilibhit                             | Uttar Pradesh (UP)          |
+| Pratapgarh                           | Uttar Pradesh (UP)          |
+| Raebareli                            | Uttar Pradesh (UP)          |
+| Ramabai Nagar (Kanpur Dehat)         | Uttar Pradesh (UP)          |
+| Rampur                               | Uttar Pradesh (UP)          |
+| Saharanpur                           | Uttar Pradesh (UP)          |
+| Sant Kabir Nagar                     | Uttar Pradesh (UP)          |
+| Sant Ravidas Nagar                   | Uttar Pradesh (UP)          |
+| Shahjahanpur                         | Uttar Pradesh (UP)          |
+| Shamli[9]                            | Uttar Pradesh (UP)          |
+| Shravasti                            | Uttar Pradesh (UP)          |
+| Siddharthnagar                       | Uttar Pradesh (UP)          |
+| Sitapur                              | Uttar Pradesh (UP)          |
+| Sonbhadra                            | Uttar Pradesh (UP)          |
+| Sultanpur                            | Uttar Pradesh (UP)          |
+| Unnao                                | Uttar Pradesh (UP)          |
+| Varanasi                             | Uttar Pradesh (UP)          |
+| Almora                               | Uttarakhand (UK)            |
+| Bageshwar                            | Uttarakhand (UK)            |
+| Chamoli                              | Uttarakhand (UK)            |
+| Champawat                            | Uttarakhand (UK)            |
+| Dehradun                             | Uttarakhand (UK)            |
+| Haridwar                             | Uttarakhand (UK)            |
+| Nainital                             | Uttarakhand (UK)            |
+| Pauri Garhwal                        | Uttarakhand (UK)            |
+| Pithoragarh                          | Uttarakhand (UK)            |
+| Rudraprayag                          | Uttarakhand (UK)            |
+| Tehri Garhwal                        | Uttarakhand (UK)            |
+| Udham Singh Nagar                    | Uttarakhand (UK)            |
+| Uttarkashi                           | Uttarakhand (UK)            |
+| Bankura                              | West Bengal (WB)            |
+| Bardhaman                            | West Bengal (WB)            |
+| Birbhum                              | West Bengal (WB)            |
+| Cooch Behar                          | West Bengal (WB)            |
+| Dakshin Dinajpur                     | West Bengal (WB)            |
+| Darjeeling                           | West Bengal (WB)            |
+| Hooghly                              | West Bengal (WB)            |
+| Howrah                               | West Bengal (WB)            |
+| Jalpaiguri                           | West Bengal (WB)            |
+| Kolkata                              | West Bengal (WB)            |
+| Maldah                               | West Bengal (WB)            |
+| Murshidabad                          | West Bengal (WB)            |
+| Nadia                                | West Bengal (WB)            |
+| North 24 Parganas                    | West Bengal (WB)            |
+| Paschim Medinipur                    | West Bengal (WB)            |
+| Purba Medinipur                      | West Bengal (WB)            |
+| Purulia                              | West Bengal (WB)            |
+| South 24 Parganas                    | West Bengal (WB)            |
+| Uttar Dinajpur                       | West Bengal (WB)            |
++--------------------------------------+-----------------------------+
+645 rows in set (0.00 sec)
+
+
+mysql> alter table const
+    -> add column bool varchar(1);
+Query OK, 0 rows affected (0.86 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from const;
++--------------------------------------+-----------------------------+------+
+| district                             | state                       | bool |
++--------------------------------------+-----------------------------+------+
+| North Andaman                        | Andaman and Nicobar (AN)    | NULL |
+| South Andaman                        | Andaman and Nicobar (AN)    | NULL |
+| Nicobar                              | Andaman and Nicobar (AN)    | NULL |
+| Adilabad                             | Andhra Pradesh (AP)         | NULL |
+| Anantapur                            | Andhra Pradesh (AP)         | NULL |
+| Chittoor                             | Andhra Pradesh (AP)         | NULL |
+| East Godavari                        | Andhra Pradesh (AP)         | NULL |
+| Guntur                               | Andhra Pradesh (AP)         | NULL |
+| Hyderabad                            | Andhra Pradesh (AP)         | NULL |
+| Karimnagar                           | Andhra Pradesh (AP)         | NULL |
+| Khammam                              | Andhra Pradesh (AP)         | NULL |
+| Krishna                              | Andhra Pradesh (AP)         | NULL |
+| Kurnool                              | Andhra Pradesh (AP)         | NULL |
+| Mahbubnagar                          | Andhra Pradesh (AP)         | NULL |
+| Medak                                | Andhra Pradesh (AP)         | NULL |
+| Nalgonda                             | Andhra Pradesh (AP)         | NULL |
+| Nizamabad                            | Andhra Pradesh (AP)         | NULL |
+| Prakasam                             | Andhra Pradesh (AP)         | NULL |
+| Ranga Reddy                          | Andhra Pradesh (AP)         | NULL |
+| Srikakulam                           | Andhra Pradesh (AP)         | NULL |
+| Sri Potti Sri Ramulu Nellore         | Andhra Pradesh (AP)         | NULL |
+| Vishakhapatnam                       | Andhra Pradesh (AP)         | NULL |
+| Vizianagaram                         | Andhra Pradesh (AP)         | NULL |
+| Warangal                             | Andhra Pradesh (AP)         | NULL |
+| West Godavari                        | Andhra Pradesh (AP)         | NULL |
+| Cudappah                             | Andhra Pradesh (AP)         | NULL |
+| Anjaw                                | Arunachal Pradesh (AR)      | NULL |
+| Changlang                            | Arunachal Pradesh (AR)      | NULL |
+| East Siang                           | Arunachal Pradesh (AR)      | NULL |
+| East Kameng                          | Arunachal Pradesh (AR)      | NULL |
+| Kurung Kumey                         | Arunachal Pradesh (AR)      | NULL |
+| Lohit                                | Arunachal Pradesh (AR)      | NULL |
+| Lower Dibang Valley                  | Arunachal Pradesh (AR)      | NULL |
+| Lower Subansiri                      | Arunachal Pradesh (AR)      | NULL |
+| Papum Pare                           | Arunachal Pradesh (AR)      | NULL |
+| Tawang                               | Arunachal Pradesh (AR)      | NULL |
+| Tirap                                | Arunachal Pradesh (AR)      | NULL |
+| Dibang Valley                        | Arunachal Pradesh (AR)      | NULL |
+| Upper Siang                          | Arunachal Pradesh (AR)      | NULL |
+| Upper Subansiri                      | Arunachal Pradesh (AR)      | NULL |
+| West Kameng                          | Arunachal Pradesh (AR)      | NULL |
+| West Siang                           | Arunachal Pradesh (AR)      | NULL |
+| Baksa                                | Assam (AS)                  | NULL |
+| Barpeta                              | Assam (AS)                  | NULL |
+| Bongaigaon                           | Assam (AS)                  | NULL |
+| Cachar                               | Assam (AS)                  | NULL |
+| Chirang                              | Assam (AS)                  | NULL |
+| Darrang                              | Assam (AS)                  | NULL |
+| Dhemaji                              | Assam (AS)                  | NULL |
+| Dima Hasao                           | Assam (AS)                  | NULL |
+| Dhubri                               | Assam (AS)                  | NULL |
+| Dibrugarh                            | Assam (AS)                  | NULL |
+| Goalpara                             | Assam (AS)                  | NULL |
+| Golaghat                             | Assam (AS)                  | NULL |
+| Hailakandi                           | Assam (AS)                  | NULL |
+| Jorhat                               | Assam (AS)                  | NULL |
+| Kamrup                               | Assam (AS)                  | NULL |
+| Kamrup Metropolitan                  | Assam (AS)                  | NULL |
+| Karbi Anglong                        | Assam (AS)                  | NULL |
+| Karimganj                            | Assam (AS)                  | NULL |
+| Kokrajhar                            | Assam (AS)                  | NULL |
+| Lakhimpur                            | Assam (AS)                  | NULL |
+| Morigaon                             | Assam (AS)                  | NULL |
+| Nagaon                               | Assam (AS)                  | NULL |
+| Nalbari                              | Assam (AS)                  | NULL |
+| Sivasagar                            | Assam (AS)                  | NULL |
+| Sonitpur                             | Assam (AS)                  | NULL |
+| Tinsukia                             | Assam (AS)                  | NULL |
+| Udalguri                             | Assam (AS)                  | NULL |
+| Araria                               | Bihar (BR)                  | NULL |
+| Arwal                                | Bihar (BR)                  | NULL |
+| Aurangabad                           | Bihar (BR)                  | NULL |
+| Banka                                | Bihar (BR)                  | NULL |
+| Begusarai                            | Bihar (BR)                  | NULL |
+| Bhagalpur                            | Bihar (BR)                  | NULL |
+| Bhojpur                              | Bihar (BR)                  | NULL |
+| Buxar                                | Bihar (BR)                  | NULL |
+| Darbhanga                            | Bihar (BR)                  | NULL |
+| East Champaran                       | Bihar (BR)                  | NULL |
+| Gaya                                 | Bihar (BR)                  | NULL |
+| Gopalganj                            | Bihar (BR)                  | NULL |
+| Jamui                                | Bihar (BR)                  | NULL |
+| Jehanabad                            | Bihar (BR)                  | NULL |
+| Kaimur                               | Bihar (BR)                  | NULL |
+| Katihar                              | Bihar (BR)                  | NULL |
+| Khagaria                             | Bihar (BR)                  | NULL |
+| Kishanganj                           | Bihar (BR)                  | NULL |
+| Lakhisarai                           | Bihar (BR)                  | NULL |
+| Madhepura                            | Bihar (BR)                  | NULL |
+| Madhubani                            | Bihar (BR)                  | NULL |
+| Munger                               | Bihar (BR)                  | NULL |
+| Muzaffarpur                          | Bihar (BR)                  | NULL |
+| Nalanda                              | Bihar (BR)                  | NULL |
+| Nawada                               | Bihar (BR)                  | NULL |
+| Patna                                | Bihar (BR)                  | NULL |
+| Purnia                               | Bihar (BR)                  | NULL |
+| Rohtas                               | Bihar (BR)                  | NULL |
+| Saharsa                              | Bihar (BR)                  | NULL |
+| Samastipur                           | Bihar (BR)                  | NULL |
+| Saran                                | Bihar (BR)                  | NULL |
+| Sheikhpura                           | Bihar (BR)                  | NULL |
+| Sheohar                              | Bihar (BR)                  | NULL |
+| Sitamarhi                            | Bihar (BR)                  | NULL |
+| Siwan                                | Bihar (BR)                  | NULL |
+| Supaul                               | Bihar (BR)                  | NULL |
+| Chandigarh                           | Chandigarh (CH)             | NULL |
+| Bastar                               | Chhattisgarh (CG)           | NULL |
+| Bijapur                              | Chhattisgarh (CG)           | NULL |
+| Bilaspur                             | Chhattisgarh (CG)           | NULL |
+| Dantewada                            | Chhattisgarh (CG)           | NULL |
+| Dhamtari                             | Chhattisgarh (CG)           | NULL |
+| Durg                                 | Chhattisgarh (CG)           | NULL |
+| Jashpur                              | Chhattisgarh (CG)           | NULL |
+| Janjgir-Champa                       | Chhattisgarh (CG)           | NULL |
+| Korba                                | Chhattisgarh (CG)           | NULL |
+| Koriya                               | Chhattisgarh (CG)           | NULL |
+| Kanker                               | Chhattisgarh (CG)           | NULL |
+| Kabirdham (formerly Kawardha)        | Chhattisgarh (CG)           | NULL |
+| Mahasamund                           | Chhattisgarh (CG)           | NULL |
+| Narayanpur                           | Chhattisgarh (CG)           | NULL |
+| Raigarh                              | Chhattisgarh (CG)           | NULL |
+| Rajnandgaon                          | Chhattisgarh (CG)           | NULL |
+| Raipur                               | Chhattisgarh (CG)           | NULL |
+| Surguja                              | Chhattisgarh (CG)           | NULL |
+| Dadra and Nagar Haveli               | Dadra and Nagar Haveli (DN) | NULL |
+| Daman                                | Daman and Diu (DD)          | NULL |
+| Diu                                  | Daman and Diu (DD)          | NULL |
+| Central Delhi                        | Delhi (DL)                  | NULL |
+| East Delhi                           | Delhi (DL)                  | NULL |
+| New Delhi                            | Delhi (DL)                  | NULL |
+| North Delhi                          | Delhi (DL)                  | NULL |
+| North East Delhi                     | Delhi (DL)                  | NULL |
+| North West Delhi                     | Delhi (DL)                  | NULL |
+| South Delhi                          | Delhi (DL)                  | NULL |
+| South West Delhi                     | Delhi (DL)                  | NULL |
+| West Delhi                           | Delhi (DL)                  | NULL |
+| North Goa                            | Goa (GA)                    | NULL |
+| South Goa                            | Goa (GA)                    | NULL |
+| Ahmedabad                            | Gujarat (GJ)                | NULL |
+| Amreli district                      | Gujarat (GJ)                | NULL |
+| Anand                                | Gujarat (GJ)                | NULL |
+| Banaskantha                          | Gujarat (GJ)                | NULL |
+| Bharuch                              | Gujarat (GJ)                | NULL |
+| Bhavnagar                            | Gujarat (GJ)                | NULL |
+| Dahod                                | Gujarat (GJ)                | NULL |
+| The Dangs                            | Gujarat (GJ)                | NULL |
+| Gandhinagar                          | Gujarat (GJ)                | NULL |
+| Jamnagar                             | Gujarat (GJ)                | NULL |
+| Junagadh                             | Gujarat (GJ)                | NULL |
+| Kutch                                | Gujarat (GJ)                | NULL |
+| Kheda                                | Gujarat (GJ)                | NULL |
+| Mehsana                              | Gujarat (GJ)                | NULL |
+| Narmada                              | Gujarat (GJ)                | NULL |
+| Navsari                              | Gujarat (GJ)                | NULL |
+| Patan                                | Gujarat (GJ)                | NULL |
+| Panchmahal                           | Gujarat (GJ)                | NULL |
+| Porbandar                            | Gujarat (GJ)                | NULL |
+| Rajkot                               | Gujarat (GJ)                | NULL |
+| Sabarkantha                          | Gujarat (GJ)                | NULL |
+| Surendranagar                        | Gujarat (GJ)                | NULL |
+| Surat                                | Gujarat (GJ)                | NULL |
+| Tapi                                 | Gujarat (GJ)                | NULL |
+| Vadodara                             | Gujarat (GJ)                | NULL |
+| Valsad                               | Gujarat (GJ)                | NULL |
+| Ambala                               | Haryana (HR)                | NULL |
+| Bhiwani                              | Haryana (HR)                | NULL |
+| Faridabad                            | Haryana (HR)                | NULL |
+| Fatehabad                            | Haryana (HR)                | NULL |
+| Gurgaon                              | Haryana (HR)                | NULL |
+| Hissar                               | Haryana (HR)                | NULL |
+| Jhajjar                              | Haryana (HR)                | NULL |
+| Jind                                 | Haryana (HR)                | NULL |
+| Karnal                               | Haryana (HR)                | NULL |
+| Kaithal                              | Haryana (HR)                | NULL |
+| Kurukshetra                          | Haryana (HR)                | NULL |
+| Mahendragarh                         | Haryana (HR)                | NULL |
+| Mewat                                | Haryana (HR)                | NULL |
+| Palwal                               | Haryana (HR)                | NULL |
+| Panchkula                            | Haryana (HR)                | NULL |
+| Panipat                              | Haryana (HR)                | NULL |
+| Rewari                               | Haryana (HR)                | NULL |
+| Rohtak                               | Haryana (HR)                | NULL |
+| Sirsa                                | Haryana (HR)                | NULL |
+| Sonipat                              | Haryana (HR)                | NULL |
+| Yamuna Nagar                         | Haryana (HR)                | NULL |
+| Bilaspur                             | Himachal Pradesh (HP)       | NULL |
+| Chamba                               | Himachal Pradesh (HP)       | NULL |
+| Hamirpur                             | Himachal Pradesh (HP)       | NULL |
+| Kangra                               | Himachal Pradesh (HP)       | NULL |
+| Kinnaur                              | Himachal Pradesh (HP)       | NULL |
+| Kullu                                | Himachal Pradesh (HP)       | NULL |
+| Lahaul and Spiti                     | Himachal Pradesh (HP)       | NULL |
+| Mandi                                | Himachal Pradesh (HP)       | NULL |
+| Shimla                               | Himachal Pradesh (HP)       | NULL |
+| Sirmaur                              | Himachal Pradesh (HP)       | NULL |
+| Solan                                | Himachal Pradesh (HP)       | NULL |
+| Una                                  | Himachal Pradesh (HP)       | NULL |
+| Anantnag                             | Jammu and Kashmir (JK)      | NULL |
+| Badgam                               | Jammu and Kashmir (JK)      | NULL |
+| Bandipora                            | Jammu and Kashmir (JK)      | NULL |
+| Baramulla                            | Jammu and Kashmir (JK)      | NULL |
+| Doda                                 | Jammu and Kashmir (JK)      | NULL |
+| Ganderbal                            | Jammu and Kashmir (JK)      | NULL |
+| Jammu                                | Jammu and Kashmir (JK)      | NULL |
+| Kargil                               | Jammu and Kashmir (JK)      | NULL |
+| Kathua                               | Jammu and Kashmir (JK)      | NULL |
+| Kishtwar                             | Jammu and Kashmir (JK)      | NULL |
+| Kupwara                              | Jammu and Kashmir (JK)      | NULL |
+| Kulgam                               | Jammu and Kashmir (JK)      | NULL |
+| Leh                                  | Jammu and Kashmir (JK)      | NULL |
+| Poonch                               | Jammu and Kashmir (JK)      | NULL |
+| Pulwama                              | Jammu and Kashmir (JK)      | NULL |
+| Rajouri                              | Jammu and Kashmir (JK)      | NULL |
+| Ramban                               | Jammu and Kashmir (JK)      | NULL |
+| Reasi                                | Jammu and Kashmir (JK)      | NULL |
+| Samba                                | Jammu and Kashmir (JK)      | NULL |
+| Shopian                              | Jammu and Kashmir (JK)      | NULL |
+| Srinagar                             | Jammu and Kashmir (JK)      | NULL |
+| Udhampur                             | Jammu and Kashmir (JK)      | NULL |
+| Bokaro                               | Jharkhand (JH)              | NULL |
+| Chatra                               | Jharkhand (JH)              | NULL |
+| Deoghar                              | Jharkhand (JH)              | NULL |
+| Dhanbad                              | Jharkhand (JH)              | NULL |
+| Dumka                                | Jharkhand (JH)              | NULL |
+| East Singhbhum                       | Jharkhand (JH)              | NULL |
+| Garhwa                               | Jharkhand (JH)              | NULL |
+| Giridih                              | Jharkhand (JH)              | NULL |
+| Godda                                | Jharkhand (JH)              | NULL |
+| Gumla                                | Jharkhand (JH)              | NULL |
+| Hazaribag                            | Jharkhand (JH)              | NULL |
+| Jamtara                              | Jharkhand (JH)              | NULL |
+| Khunti                               | Jharkhand (JH)              | NULL |
+| Koderma                              | Jharkhand (JH)              | NULL |
+| Latehar                              | Jharkhand (JH)              | NULL |
+| Lohardaga                            | Jharkhand (JH)              | NULL |
+| Pakur                                | Jharkhand (JH)              | NULL |
+| Palamu                               | Jharkhand (JH)              | NULL |
+| Ramgarh                              | Jharkhand (JH)              | NULL |
+| Ranchi                               | Jharkhand (JH)              | NULL |
+| Sahibganj                            | Jharkhand (JH)              | NULL |
+| Seraikela Kharsawan                  | Jharkhand (JH)              | NULL |
+| Simdega                              | Jharkhand (JH)              | NULL |
+| West Singhbhum                       | Jharkhand (JH)              | NULL |
+| Bagalkot                             | Karnataka (KA)              | NULL |
+| Bangalore Rural                      | Karnataka (KA)              | NULL |
+| Bangalore Urban                      | Karnataka (KA)              | NULL |
+| Belgaum                              | Karnataka (KA)              | NULL |
+| Bellary                              | Karnataka (KA)              | NULL |
+| Bidar                                | Karnataka (KA)              | NULL |
+| Bijapur                              | Karnataka (KA)              | NULL |
+| Chamarajnagar                        | Karnataka (KA)              | NULL |
+| Chikkamagaluru                       | Karnataka (KA)              | NULL |
+| Chikkaballapur                       | Karnataka (KA)              | NULL |
+| Chitradurga                          | Karnataka (KA)              | NULL |
+| Davanagere                           | Karnataka (KA)              | NULL |
+| Dharwad                              | Karnataka (KA)              | NULL |
+| Dakshina Kannada                     | Karnataka (KA)              | NULL |
+| Gadag                                | Karnataka (KA)              | NULL |
+| Gulbarga                             | Karnataka (KA)              | NULL |
+| Hassan                               | Karnataka (KA)              | NULL |
+| Haveri district                      | Karnataka (KA)              | NULL |
+| Kodagu                               | Karnataka (KA)              | NULL |
+| Kolar                                | Karnataka (KA)              | NULL |
+| Koppal                               | Karnataka (KA)              | NULL |
+| Mandya                               | Karnataka (KA)              | NULL |
+| Mysore                               | Karnataka (KA)              | NULL |
+| Raichur                              | Karnataka (KA)              | NULL |
+| Shimoga                              | Karnataka (KA)              | NULL |
+| Tumkur                               | Karnataka (KA)              | NULL |
+| Udupi                                | Karnataka (KA)              | NULL |
+| Uttara Kannada                       | Karnataka (KA)              | NULL |
+| Ramanagara                           | Karnataka (KA)              | NULL |
+| Yadgir                               | Karnataka (KA)              | NULL |
+| Alappuzha                            | Kerala (KL)                 | NULL |
+| Ernakulam                            | Kerala (KL)                 | NULL |
+| Idukki                               | Kerala (KL)                 | NULL |
+| Kannur                               | Kerala (KL)                 | NULL |
+| Kasaragod                            | Kerala (KL)                 | NULL |
+| Kollam                               | Kerala (KL)                 | NULL |
+| Kottayam                             | Kerala (KL)                 | NULL |
+| Kozhikode                            | Kerala (KL)                 | NULL |
+| Malappuram                           | Kerala (KL)                 | NULL |
+| Palakkad                             | Kerala (KL)                 | NULL |
+| Pathanamthitta                       | Kerala (KL)                 | NULL |
+| Thrissur                             | Kerala (KL)                 | NULL |
+| Thiruvananthapuram                   | Kerala (KL)                 | NULL |
+| Wayanad                              | Kerala (KL)                 | NULL |
+| Lakshadweep                          | Lakshdweep (LD)             | NULL |
+| Agar                                 | Madhya Pradesh (MP)         | NULL |
+| Alirajpur                            | Madhya Pradesh (MP)         | NULL |
+| Anuppur                              | Madhya Pradesh (MP)         | NULL |
+| Ashok Nagar                          | Madhya Pradesh (MP)         | NULL |
+| Balaghat                             | Madhya Pradesh (MP)         | NULL |
+| Barwani                              | Madhya Pradesh (MP)         | NULL |
+| Betul                                | Madhya Pradesh (MP)         | NULL |
+| Bhind                                | Madhya Pradesh (MP)         | NULL |
+| Bhopal                               | Madhya Pradesh (MP)         | NULL |
+| Burhanpur                            | Madhya Pradesh (MP)         | NULL |
+| Chhatarpur                           | Madhya Pradesh (MP)         | NULL |
+| Chhindwara                           | Madhya Pradesh (MP)         | NULL |
+| Damoh                                | Madhya Pradesh (MP)         | NULL |
+| Datia                                | Madhya Pradesh (MP)         | NULL |
+| Dewas                                | Madhya Pradesh (MP)         | NULL |
+| Dhar                                 | Madhya Pradesh (MP)         | NULL |
+| Dindori                              | Madhya Pradesh (MP)         | NULL |
+| Guna                                 | Madhya Pradesh (MP)         | NULL |
+| Gwalior                              | Madhya Pradesh (MP)         | NULL |
+| Harda                                | Madhya Pradesh (MP)         | NULL |
+| Hoshangabad                          | Madhya Pradesh (MP)         | NULL |
+| Indore                               | Madhya Pradesh (MP)         | NULL |
+| Jabalpur                             | Madhya Pradesh (MP)         | NULL |
+| Jhabua                               | Madhya Pradesh (MP)         | NULL |
+| Katni                                | Madhya Pradesh (MP)         | NULL |
+| Khandwa (East Nimar)                 | Madhya Pradesh (MP)         | NULL |
+| Khargone (West Nimar)                | Madhya Pradesh (MP)         | NULL |
+| Mandla                               | Madhya Pradesh (MP)         | NULL |
+| Mandsaur                             | Madhya Pradesh (MP)         | NULL |
+| Morena                               | Madhya Pradesh (MP)         | NULL |
+| Narsinghpur                          | Madhya Pradesh (MP)         | NULL |
+| Neemuch                              | Madhya Pradesh (MP)         | NULL |
+| Panna                                | Madhya Pradesh (MP)         | NULL |
+| Raisen                               | Madhya Pradesh (MP)         | NULL |
+| Rajgarh                              | Madhya Pradesh (MP)         | NULL |
+| Ratlam                               | Madhya Pradesh (MP)         | NULL |
+| Rewa                                 | Madhya Pradesh (MP)         | NULL |
+| Sagar                                | Madhya Pradesh (MP)         | NULL |
+| Satna                                | Madhya Pradesh (MP)         | NULL |
+| Sehore                               | Madhya Pradesh (MP)         | NULL |
+| Seoni                                | Madhya Pradesh (MP)         | NULL |
+| Shahdol                              | Madhya Pradesh (MP)         | NULL |
+| Shajapur                             | Madhya Pradesh (MP)         | NULL |
+| Sheopur                              | Madhya Pradesh (MP)         | NULL |
+| Shivpuri                             | Madhya Pradesh (MP)         | NULL |
+| Sidhi                                | Madhya Pradesh (MP)         | NULL |
+| Singrauli                            | Madhya Pradesh (MP)         | NULL |
+| Tikamgarh                            | Madhya Pradesh (MP)         | NULL |
+| Ujjain                               | Madhya Pradesh (MP)         | NULL |
+| Umaria                               | Madhya Pradesh (MP)         | NULL |
+| Vidisha                              | Madhya Pradesh (MP)         | NULL |
+| Ahmednagar                           | Maharashtra (MH)            | NULL |
+| Akola                                | Maharashtra (MH)            | NULL |
+| Amravati                             | Maharashtra (MH)            | NULL |
+| Aurangabad                           | Maharashtra (MH)            | NULL |
+| Beed                                 | Maharashtra (MH)            | NULL |
+| Bhandara                             | Maharashtra (MH)            | NULL |
+| Buldhana                             | Maharashtra (MH)            | NULL |
+| Chandrapur                           | Maharashtra (MH)            | NULL |
+| Dhule                                | Maharashtra (MH)            | NULL |
+| Gadchiroli                           | Maharashtra (MH)            | NULL |
+| Gondia                               | Maharashtra (MH)            | NULL |
+| Hingoli                              | Maharashtra (MH)            | NULL |
+| Jalgaon                              | Maharashtra (MH)            | NULL |
+| Jalna                                | Maharashtra (MH)            | NULL |
+| Kolhapur                             | Maharashtra (MH)            | NULL |
+| Latur                                | Maharashtra (MH)            | NULL |
+| Mumbai City                          | Maharashtra (MH)            | NULL |
+| Mumbai suburban                      | Maharashtra (MH)            | NULL |
+| Nanded                               | Maharashtra (MH)            | NULL |
+| Nandurbar                            | Maharashtra (MH)            | NULL |
+| Nagpur                               | Maharashtra (MH)            | NULL |
+| Nashik                               | Maharashtra (MH)            | NULL |
+| Osmanabad                            | Maharashtra (MH)            | NULL |
+| Parbhani                             | Maharashtra (MH)            | NULL |
+| Pune                                 | Maharashtra (MH)            | NULL |
+| Raigad                               | Maharashtra (MH)            | NULL |
+| Ratnagiri                            | Maharashtra (MH)            | NULL |
+| Sangli                               | Maharashtra (MH)            | NULL |
+| Satara                               | Maharashtra (MH)            | NULL |
+| Sindhudurg                           | Maharashtra (MH)            | NULL |
+| Solapur                              | Maharashtra (MH)            | NULL |
+| Thane                                | Maharashtra (MH)            | NULL |
+| Wardha                               | Maharashtra (MH)            | NULL |
+| Washim                               | Maharashtra (MH)            | NULL |
+| Yavatmal                             | Maharashtra (MH)            | NULL |
+| Bishnupur                            | Manipur (MN)                | NULL |
+| Churachandpur                        | Manipur (MN)                | NULL |
+| Chandel                              | Manipur (MN)                | NULL |
+| Imphal East                          | Manipur (MN)                | NULL |
+| Senapati                             | Manipur (MN)                | NULL |
+| Tamenglong                           | Manipur (MN)                | NULL |
+| Thoubal                              | Manipur (MN)                | NULL |
+| Ukhrul                               | Manipur (MN)                | NULL |
+| Imphal West                          | Manipur (MN)                | NULL |
+| East Garo Hills                      | Meghalaya (ML)              | NULL |
+| East Khasi Hills                     | Meghalaya (ML)              | NULL |
+| Jaintia Hills                        | Meghalaya (ML)              | NULL |
+| Ri Bhoi                              | Meghalaya (ML)              | NULL |
+| South Garo Hills                     | Meghalaya (ML)              | NULL |
+| West Garo Hills                      | Meghalaya (ML)              | NULL |
+| West Khasi Hills                     | Meghalaya (ML)              | NULL |
+| Aizawl                               | Mizoram (MZ)                | NULL |
+| Champhai                             | Mizoram (MZ)                | NULL |
+| Kolasib                              | Mizoram (MZ)                | NULL |
+| Lawngtlai                            | Mizoram (MZ)                | NULL |
+| Lunglei                              | Mizoram (MZ)                | NULL |
+| Mamit                                | Mizoram (MZ)                | NULL |
+| Saiha                                | Mizoram (MZ)                | NULL |
+| Serchhip                             | Mizoram (MZ)                | NULL |
+| Dimapur                              | Nagaland (NL)               | NULL |
+| Kiphire                              | Nagaland (NL)               | NULL |
+| Kohima                               | Nagaland (NL)               | NULL |
+| Longleng                             | Nagaland (NL)               | NULL |
+| Mokokchung                           | Nagaland (NL)               | NULL |
+| Mon                                  | Nagaland (NL)               | NULL |
+| Peren                                | Nagaland (NL)               | NULL |
+| Phek                                 | Nagaland (NL)               | NULL |
+| Tuensang                             | Nagaland (NL)               | NULL |
+| Wokha                                | Nagaland (NL)               | NULL |
+| Zunheboto                            | Nagaland (NL)               | NULL |
+| Angul                                | Odisha (OD)                 | NULL |
+| Boudh (Bauda)                        | Odisha (OD)                 | NULL |
+| Bhadrak                              | Odisha (OD)                 | NULL |
+| Balangir                             | Odisha (OD)                 | NULL |
+| Bargarh (Baragarh)                   | Odisha (OD)                 | NULL |
+| Balasore                             | Odisha (OD)                 | NULL |
+| Cuttack                              | Odisha (OD)                 | NULL |
+| Debagarh (Deogarh)                   | Odisha (OD)                 | NULL |
+| Dhenkanal                            | Odisha (OD)                 | NULL |
+| Ganjam                               | Odisha (OD)                 | NULL |
+| Gajapati                             | Odisha (OD)                 | NULL |
+| Jharsuguda                           | Odisha (OD)                 | NULL |
+| Jajpur                               | Odisha (OD)                 | NULL |
+| Jagatsinghpur                        | Odisha (OD)                 | NULL |
+| Khordha                              | Odisha (OD)                 | NULL |
+| Kendujhar (Keonjhar)                 | Odisha (OD)                 | NULL |
+| Kalahandi                            | Odisha (OD)                 | NULL |
+| Kandhamal                            | Odisha (OD)                 | NULL |
+| Koraput                              | Odisha (OD)                 | NULL |
+| Kendrapara                           | Odisha (OD)                 | NULL |
+| Malkangiri                           | Odisha (OD)                 | NULL |
+| Mayurbhanj                           | Odisha (OD)                 | NULL |
+| Nabarangpur                          | Odisha (OD)                 | NULL |
+| Nuapada                              | Odisha (OD)                 | NULL |
+| Nayagarh                             | Odisha (OD)                 | NULL |
+| Puri                                 | Odisha (OD)                 | NULL |
+| Rayagada                             | Odisha (OD)                 | NULL |
+| Sambalpur                            | Odisha (OD)                 | NULL |
+| Subarnapur (Sonepur)                 | Odisha (OD)                 | NULL |
+| Sundergarh                           | Odisha (OD)                 | NULL |
+| Karaikal                             | Puducherry (PY)             | NULL |
+| Mahe                                 | Puducherry (PY)             | NULL |
+| Pondicherry                          | Puducherry (PY)             | NULL |
+| Yanam                                | Puducherry (PY)             | NULL |
+| Amritsar                             | Punjab (PB)                 | NULL |
+| Barnala                              | Punjab (PB)                 | NULL |
+| Bathinda                             | Punjab (PB)                 | NULL |
+| Firozpur                             | Punjab (PB)                 | NULL |
+| Faridkot                             | Punjab (PB)                 | NULL |
+| Fatehgarh Sahib                      | Punjab (PB)                 | NULL |
+| Fazilka[6]                           | Punjab (PB)                 | NULL |
+| Gurdaspur                            | Punjab (PB)                 | NULL |
+| Hoshiarpur                           | Punjab (PB)                 | NULL |
+| Jalandhar                            | Punjab (PB)                 | NULL |
+| Kapurthala                           | Punjab (PB)                 | NULL |
+| Ludhiana                             | Punjab (PB)                 | NULL |
+| Mansa                                | Punjab (PB)                 | NULL |
+| Moga                                 | Punjab (PB)                 | NULL |
+| Sri Muktsar Sahib                    | Punjab (PB)                 | NULL |
+| Pathankot                            | Punjab (PB)                 | NULL |
+| Patiala                              | Punjab (PB)                 | NULL |
+| Rupnagar                             | Punjab (PB)                 | NULL |
+| Ajitgarh (Mohali)                    | Punjab (PB)                 | NULL |
+| Sangrur                              | Punjab (PB)                 | NULL |
+| Shahid Bhagat Singh Nagar            | Punjab (PB)                 | NULL |
+| Tarn Taran                           | Punjab (PB)                 | NULL |
+| Ajmer                                | Rajasthan (RJ)              | NULL |
+| Alwar                                | Rajasthan (RJ)              | NULL |
+| Bikaner                              | Rajasthan (RJ)              | NULL |
+| Barmer                               | Rajasthan (RJ)              | NULL |
+| Banswara                             | Rajasthan (RJ)              | NULL |
+| Bharatpur                            | Rajasthan (RJ)              | NULL |
+| Baran                                | Rajasthan (RJ)              | NULL |
+| Bundi                                | Rajasthan (RJ)              | NULL |
+| Bhilwara                             | Rajasthan (RJ)              | NULL |
+| Churu                                | Rajasthan (RJ)              | NULL |
+| Chittorgarh                          | Rajasthan (RJ)              | NULL |
+| Dausa                                | Rajasthan (RJ)              | NULL |
+| Dholpur                              | Rajasthan (RJ)              | NULL |
+| Dungapur                             | Rajasthan (RJ)              | NULL |
+| Ganganagar                           | Rajasthan (RJ)              | NULL |
+| Hanumangarh                          | Rajasthan (RJ)              | NULL |
+| Jhunjhunu                            | Rajasthan (RJ)              | NULL |
+| Jalore                               | Rajasthan (RJ)              | NULL |
+| Jodhpur                              | Rajasthan (RJ)              | NULL |
+| Jaipur                               | Rajasthan (RJ)              | NULL |
+| Jaisalmer                            | Rajasthan (RJ)              | NULL |
+| Jhalawar                             | Rajasthan (RJ)              | NULL |
+| Karauli                              | Rajasthan (RJ)              | NULL |
+| Kota                                 | Rajasthan (RJ)              | NULL |
+| Nagaur                               | Rajasthan (RJ)              | NULL |
+| Pali                                 | Rajasthan (RJ)              | NULL |
+| Pratapgarh                           | Rajasthan (RJ)              | NULL |
+| Rajsamand                            | Rajasthan (RJ)              | NULL |
+| Sikar                                | Rajasthan (RJ)              | NULL |
+| Sawai Madhopur                       | Rajasthan (RJ)              | NULL |
+| Sirohi                               | Rajasthan (RJ)              | NULL |
+| Tonk                                 | Rajasthan (RJ)              | NULL |
+| Udaipur                              | Rajasthan (RJ)              | NULL |
+| East Sikkim                          | Sikkim (SK)                 | NULL |
+| North Sikkim                         | Sikkim (SK)                 | NULL |
+| South Sikkim                         | Sikkim (SK)                 | NULL |
+| West Sikkim                          | Sikkim (SK)                 | NULL |
+| Ariyalur                             | Tamil Nadu (TN)             | NULL |
+| Chennai                              | Tamil Nadu (TN)             | NULL |
+| Coimbatore                           | Tamil Nadu (TN)             | NULL |
+| Cuddalore                            | Tamil Nadu (TN)             | NULL |
+| Dharmapuri                           | Tamil Nadu (TN)             | NULL |
+| Dindigul                             | Tamil Nadu (TN)             | NULL |
+| Erode                                | Tamil Nadu (TN)             | NULL |
+| Kanchipuram                          | Tamil Nadu (TN)             | NULL |
+| Kanyakumari                          | Tamil Nadu (TN)             | NULL |
+| Karur                                | Tamil Nadu (TN)             | NULL |
+| Krishnagiri                          | Tamil Nadu (TN)             | NULL |
+| Madurai                              | Tamil Nadu (TN)             | NULL |
+| Nagapattinam                         | Tamil Nadu (TN)             | NULL |
+| Nilgiris                             | Tamil Nadu (TN)             | NULL |
+| Namakkal                             | Tamil Nadu (TN)             | NULL |
+| Perambalur                           | Tamil Nadu (TN)             | NULL |
+| Pudukkottai                          | Tamil Nadu (TN)             | NULL |
+| Ramanathapuram                       | Tamil Nadu (TN)             | NULL |
+| Salem                                | Tamil Nadu (TN)             | NULL |
+| Sivaganga                            | Tamil Nadu (TN)             | NULL |
+| Tirupur                              | Tamil Nadu (TN)             | NULL |
+| Tiruchirappalli                      | Tamil Nadu (TN)             | NULL |
+| Theni                                | Tamil Nadu (TN)             | NULL |
+| Tirunelveli                          | Tamil Nadu (TN)             | NULL |
+| Thanjavur                            | Tamil Nadu (TN)             | NULL |
+| Thoothukudi                          | Tamil Nadu (TN)             | NULL |
+| Tiruvallur                           | Tamil Nadu (TN)             | NULL |
+| Tiruvarur                            | Tamil Nadu (TN)             | NULL |
+| Tiruvannamalai                       | Tamil Nadu (TN)             | NULL |
+| Vellore                              | Tamil Nadu (TN)             | NULL |
+| Viluppuram                           | Tamil Nadu (TN)             | NULL |
+| Virudhunagar                         | Tamil Nadu (TN)             | NULL |
+| Dhalai                               | Tripura (TR)                | NULL |
+| North Tripura                        | Tripura (TR)                | NULL |
+| South Tripura                        | Tripura (TR)                | NULL |
+| Khowai[7]                            | Tripura (TR)                | NULL |
+| West Tripura                         | Tripura (TR)                | NULL |
+| Agra                                 | Uttar Pradesh (UP)          | NULL |
+| Aligarh                              | Uttar Pradesh (UP)          | NULL |
+| Allahabad                            | Uttar Pradesh (UP)          | NULL |
+| Ambedkar Nagar                       | Uttar Pradesh (UP)          | NULL |
+| Auraiya                              | Uttar Pradesh (UP)          | NULL |
+| Azamgarh                             | Uttar Pradesh (UP)          | NULL |
+| Bagpat                               | Uttar Pradesh (UP)          | NULL |
+| Bahraich                             | Uttar Pradesh (UP)          | NULL |
+| Ballia                               | Uttar Pradesh (UP)          | NULL |
+| Balrampur                            | Uttar Pradesh (UP)          | NULL |
+| Banda                                | Uttar Pradesh (UP)          | NULL |
+| Barabanki                            | Uttar Pradesh (UP)          | NULL |
+| Bareilly                             | Uttar Pradesh (UP)          | NULL |
+| Basti                                | Uttar Pradesh (UP)          | NULL |
+| Bijnor                               | Uttar Pradesh (UP)          | NULL |
+| Budaun                               | Uttar Pradesh (UP)          | NULL |
+| Bulandshahr                          | Uttar Pradesh (UP)          | NULL |
+| Chandauli                            | Uttar Pradesh (UP)          | NULL |
+| Chhatrapati Shahuji Maharaj Nagar[8] | Uttar Pradesh (UP)          | NULL |
+| Chitrakoot                           | Uttar Pradesh (UP)          | NULL |
+| Deoria                               | Uttar Pradesh (UP)          | NULL |
+| Etah                                 | Uttar Pradesh (UP)          | NULL |
+| Etawah                               | Uttar Pradesh (UP)          | NULL |
+| Faizabad                             | Uttar Pradesh (UP)          | NULL |
+| Farrukhabad                          | Uttar Pradesh (UP)          | NULL |
+| Fatehpur                             | Uttar Pradesh (UP)          | NULL |
+| Firozabad                            | Uttar Pradesh (UP)          | NULL |
+| Gautam Buddh Nagar                   | Uttar Pradesh (UP)          | NULL |
+| Ghaziabad                            | Uttar Pradesh (UP)          | NULL |
+| Ghazipur                             | Uttar Pradesh (UP)          | NULL |
+| Gonda                                | Uttar Pradesh (UP)          | NULL |
+| Gorakhpur                            | Uttar Pradesh (UP)          | NULL |
+| Hamirpur                             | Uttar Pradesh (UP)          | NULL |
+| Hardoi                               | Uttar Pradesh (UP)          | NULL |
+| Hathras                              | Uttar Pradesh (UP)          | NULL |
+| Jalaun                               | Uttar Pradesh (UP)          | NULL |
+| Jaunpur district                     | Uttar Pradesh (UP)          | NULL |
+| Jhansi                               | Uttar Pradesh (UP)          | NULL |
+| Jyotiba Phule Nagar                  | Uttar Pradesh (UP)          | NULL |
+| Kannauj                              | Uttar Pradesh (UP)          | NULL |
+| Kanpur                               | Uttar Pradesh (UP)          | NULL |
+| Kanshi Ram Nagar                     | Uttar Pradesh (UP)          | NULL |
+| Kaushambi                            | Uttar Pradesh (UP)          | NULL |
+| Kushinagar                           | Uttar Pradesh (UP)          | NULL |
+| Lakhimpur Kheri                      | Uttar Pradesh (UP)          | NULL |
+| Lalitpur                             | Uttar Pradesh (UP)          | NULL |
+| Lucknow                              | Uttar Pradesh (UP)          | NULL |
+| Maharajganj                          | Uttar Pradesh (UP)          | NULL |
+| Mahoba                               | Uttar Pradesh (UP)          | NULL |
+| Mainpuri                             | Uttar Pradesh (UP)          | NULL |
+| Mathura                              | Uttar Pradesh (UP)          | NULL |
+| Mau                                  | Uttar Pradesh (UP)          | NULL |
+| Meerut                               | Uttar Pradesh (UP)          | NULL |
+| Mirzapur                             | Uttar Pradesh (UP)          | NULL |
+| Moradabad                            | Uttar Pradesh (UP)          | NULL |
+| Muzaffarnagar                        | Uttar Pradesh (UP)          | NULL |
+| Panchsheel Nagar district (Hapur)    | Uttar Pradesh (UP)          | NULL |
+| Pilibhit                             | Uttar Pradesh (UP)          | NULL |
+| Pratapgarh                           | Uttar Pradesh (UP)          | NULL |
+| Raebareli                            | Uttar Pradesh (UP)          | NULL |
+| Ramabai Nagar (Kanpur Dehat)         | Uttar Pradesh (UP)          | NULL |
+| Rampur                               | Uttar Pradesh (UP)          | NULL |
+| Saharanpur                           | Uttar Pradesh (UP)          | NULL |
+| Sant Kabir Nagar                     | Uttar Pradesh (UP)          | NULL |
+| Sant Ravidas Nagar                   | Uttar Pradesh (UP)          | NULL |
+| Shahjahanpur                         | Uttar Pradesh (UP)          | NULL |
+| Shamli[9]                            | Uttar Pradesh (UP)          | NULL |
+| Shravasti                            | Uttar Pradesh (UP)          | NULL |
+| Siddharthnagar                       | Uttar Pradesh (UP)          | NULL |
+| Sitapur                              | Uttar Pradesh (UP)          | NULL |
+| Sonbhadra                            | Uttar Pradesh (UP)          | NULL |
+| Sultanpur                            | Uttar Pradesh (UP)          | NULL |
+| Unnao                                | Uttar Pradesh (UP)          | NULL |
+| Varanasi                             | Uttar Pradesh (UP)          | NULL |
+| Almora                               | Uttarakhand (UK)            | NULL |
+| Bageshwar                            | Uttarakhand (UK)            | NULL |
+| Chamoli                              | Uttarakhand (UK)            | NULL |
+| Champawat                            | Uttarakhand (UK)            | NULL |
+| Dehradun                             | Uttarakhand (UK)            | NULL |
+| Haridwar                             | Uttarakhand (UK)            | NULL |
+| Nainital                             | Uttarakhand (UK)            | NULL |
+| Pauri Garhwal                        | Uttarakhand (UK)            | NULL |
+| Pithoragarh                          | Uttarakhand (UK)            | NULL |
+| Rudraprayag                          | Uttarakhand (UK)            | NULL |
+| Tehri Garhwal                        | Uttarakhand (UK)            | NULL |
+| Udham Singh Nagar                    | Uttarakhand (UK)            | NULL |
+| Uttarkashi                           | Uttarakhand (UK)            | NULL |
+| Bankura                              | West Bengal (WB)            | NULL |
+| Bardhaman                            | West Bengal (WB)            | NULL |
+| Birbhum                              | West Bengal (WB)            | NULL |
+| Cooch Behar                          | West Bengal (WB)            | NULL |
+| Dakshin Dinajpur                     | West Bengal (WB)            | NULL |
+| Darjeeling                           | West Bengal (WB)            | NULL |
+| Hooghly                              | West Bengal (WB)            | NULL |
+| Howrah                               | West Bengal (WB)            | NULL |
+| Jalpaiguri                           | West Bengal (WB)            | NULL |
+| Kolkata                              | West Bengal (WB)            | NULL |
+| Maldah                               | West Bengal (WB)            | NULL |
+| Murshidabad                          | West Bengal (WB)            | NULL |
+| Nadia                                | West Bengal (WB)            | NULL |
+| North 24 Parganas                    | West Bengal (WB)            | NULL |
+| Paschim Medinipur                    | West Bengal (WB)            | NULL |
+| Purba Medinipur                      | West Bengal (WB)            | NULL |
+| Purulia                              | West Bengal (WB)            | NULL |
+| South 24 Parganas                    | West Bengal (WB)            | NULL |
+| Uttar Dinajpur                       | West Bengal (WB)            | NULL |
++--------------------------------------+-----------------------------+------+
+645 rows in set (0.00 sec)

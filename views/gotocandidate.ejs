@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/style.css"/>
+<head>
+  <style>
+
+table,td,th
+{
+  border:1px solid black;
+  text-align: center;
+  padding: 30px;
+  background-color:#9fd4ff;
+}
+th{
+    color: #ffffff;
+    background-color: #0000ff;
+}
+</style>
+
+
+    
+
+  
+  
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+</head>
+<body>
+  <div class="full">
+  
+  <div class="header">
+    <p style="margin: 0px"><img src="https://cdn.dribbble.com/users/3877747/screenshots/6833495/vote-hand-election_2x.jpg" height="100px" width="100px"  style="  border-style: solid; border-color: rgb(0,0,100); border-radius: 50%; " >ONLINE VOTING SYSTEM<img src="https://media1.giphy.com/media/3ohze3ZjS32wKu6C64/giphy.webp?cid=790b7611719242f21f83cc0b1de29e26dae77b0408b1f7f7&rid=giphy.webp" height="100px" width="100px"  style="  border-style: solid; border-color: rgb(0,0,100); border-radius: 50% " ></p></div>
+    <h1 align="center">A GOVT OF INDIA INITIATIVE</h1>
+    <hr>
+  
+    <!--<div class="dates">
+      
+      <p><h2 id="tim" >time</h2>
+      
+    <h2 id="day" style="float: right;">day</h2></p>
+    </div>-->
+    
+    <ul>
+      <li><form action="gohome" method="get"><button class="active">
+   
+   <img src="https://www.animatedimages.org/data/media/426/animated-button-image-0299.gif" />
+</button></li></form>
+<li><form action="golink" method="get"><button >
+   
+   <img src="https://www.animatedimages.org/data/media/426/animated-button-image-0304.gif" border="0" alt="animated-button-image-0024" />
+</button></li></form>
+<li><form action="gocontact" method="get"><button >
+   
+   <img src="https://www.animatedimages.org/data/media/426/animated-button-image-0302.gif" border="0" alt="animated-button-image-0024"/>
+</button></li></form>
+<li><form action="goabout" method="get"><button >
+   
+   <img src="https://www.animatedimages.org/data/media/426/animated-button-image-0300.gif" border="0" alt="animated-button-image-0024" />
+</button></li></form>
+
+<li><form action="seecandidatevoters" method="get"><button >
+   see voters
+</button></form></li>
+<li><form action="candidateresult" method="get"><button >
+  Result
+</button></form></li>
+  
+</ul>
+
+    </div>
+
+        
+    <div class="table-data" style="margin-left:10%;padding:0.5px 8px;height:1000px;background-image:url(download.jpeg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+
+    <table border="1" align="center" id="myTable">
+        <tr>
+            <th> FIELD</th>
+            <th>ENTRY</th>
+            
+
+        </tr>
+        <% for(var i=0; i < data.length; i++) { %>
+    <tr>
+      
+     <td>firstname</td>
+     <td><%= data[i].firstname %></td>
+    </tr>
+    <tr>
+      
+     <td>middlename</td>
+     <td><%= data[i].middlename %></td>
+    </tr>
+    <tr>
+      
+     <td>lastname</td>
+     <td><%= data[i].lastname %></td>
+    </tr>
+    <tr>
+      
+     <td>DOB</td>
+     <td><%= data[i].DOB %></td>
+    </tr>
+    <tr>
+      
+     <td>Mobile</td>
+     <td><%= data[i].mobilenumber %></td>
+    </tr>
+    <tr>
+      
+     <td>E-mail</td>
+     <td><%= data[i].email %></td>
+    </tr>
+    <tr>
+      
+     <td>state</td>
+     <td><%= data[i].state %></td>
+    </tr>
+    <tr>
+      
+     <td>constituency</td>
+     <td><%= data[i].constituency %></td>
+    </tr>
+
+<tr>
+    <td>profession</td>
+     <td><%= data[i].profession %></td>
+    </tr>
+    <tr>
+    <td>party</td>
+     <td><%= data[i].party %></td>
+    </tr>
+
+
+
+
+
+
+
+    <% } %>
+        
+    </table>
+    <form action="logout" method="get" style="text-align: center;"><button >
+  LOGOUT
+</button></form>
+    </div>
+  
+
+
+</body>
+</html>

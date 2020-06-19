@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/style.css"/>
+<head>
+  <style>
+
+table,td,th
+{
+  border:1px solid black;
+  text-align: center;
+  padding: 30px;
+  background-color:#9fd4ff;
+}
+th{
+    color: #ffffff;
+    background-color: #0000ff;
+}
+</style>
+
+<script type="text/javascript">
+  function mallu(x) {
+    //document.getElementById("ram").innerHTML="hi";
+    
+    //document.getElementById("m").innerHTML=x;
+    document.getElementById("myvote").value=x;
+    document.getElementById("myform").submit();
+    /*console.log("now see element");
+    document.getElementById("0").innerHTML="thank you for VOTING";
+    console.log("element with id x " + document.getElementById("x").value);*/
+    
+
+    // body...
+  }
+</script>
+    
+
+  
+  
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript"> 
+        window.history.forward(); 
+        function noBack() { 
+            window.history.forward(); 
+        } 
+    </script> 
+  
+</head>
+<body>
+  <div class="full">
+  
+  <div class="header">
+    <p style="margin: 0px"><img src="https://cdn.dribbble.com/users/3877747/screenshots/6833495/vote-hand-election_2x.jpg" height="100px" width="100px"  style="  border-style: solid; border-color: rgb(0,0,100); border-radius: 50%; " >ONLINE VOTING SYSTEM<img src="https://media1.giphy.com/media/3ohze3ZjS32wKu6C64/giphy.webp?cid=790b7611719242f21f83cc0b1de29e26dae77b0408b1f7f7&rid=giphy.webp" height="100px" width="100px"  style="  border-style: solid; border-color: rgb(0,0,100); border-radius: 50% " ></p></div>
+    <h1 align="center">A GOVT OF INDIA INITIATIVE</h1>
+    <hr>
+  
+    <!--<div class="dates">
+      
+      <p><h2 id="tim" >time</h2>
+      
+    <h2 id="day" style="float: right;">day</h2></p>
+    </div>-->
+    
+    <ul>
+      <li><form action="gohome" method="get"><button class="active">
+   
+   <img src="https://www.animatedimages.org/data/media/426/animated-button-image-0299.gif" />
+</button></li></form>
+<li><form action="golink" method="get"><button >
+   
+   <img src="https://www.animatedimages.org/data/media/426/animated-button-image-0304.gif" border="0" alt="animated-button-image-0024" />
+</button></li></form>
+<li><form action="gocontact" method="get"><button >
+   
+   <img src="https://www.animatedimages.org/data/media/426/animated-button-image-0302.gif" border="0" alt="animated-button-image-0024"/>
+</button></li></form>
+<li><form action="goabout" method="get"><button >
+   
+   <img src="https://www.animatedimages.org/data/media/426/animated-button-image-0300.gif" border="0" alt="animated-button-image-0024" />
+</button></li></form>
+
+
+  
+</ul>
+
+    </div>
+
+        
+    <div class="table-data" style="margin-left:10%;padding:0.5px 8px;height:1000px;background-image:url(download.jpeg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+      <% var test = 101; %> 
+
+        
+        <form id="myform" method="post" action="voted">
+          <input type="hidden" name="candidateid" id="myvote">
+
+        </form>
+      
+    <table border="1" align="center" id="myTable">
+        <tr>
+            <th>CANDIDATE ID</th>
+            <th>CANDIDATE NAME</th>
+            <th>PARTY</th>
+            <th>VOTE</th>
+
+        </tr>
+        
+        <% for(var i=0; i < data.length; i++) { %>
+    <tr>
+      <td id="<%= i %>"><%= data[i].candidateid %></td>
+     <td><%= data[i].firstname + data[i].middlename + data[i].lastname %></td>
+     <td><%= data[i].party %></td>
+     <td ><button id="<%= data[i].candidateid %>" onclick="mallu(this.id)" ><img src="https://media2.giphy.com/media/KyH6bWpauFsNMr0Vhi/giphy.gif?cid=790b7611a3c703517e62da9648f2f0b0744852b0aa232964&rid=giphy.gif" height="50" width="50"></button></td>
+     
+    </tr>
+    <% } %>
+        
+    </table>
+  
+    
+    </div>
+  
+
+
+</body>
+</html>
